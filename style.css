@@ -1,0 +1,13 @@
+.box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;height: 440px;
+    background-color: midnightblue;
+}
+body {
+    background-image: url("times.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
