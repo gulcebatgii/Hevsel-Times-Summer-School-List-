@@ -1,51 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-</head>
-<body>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button id="buton">Login</button>
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const submitButon = document.getElementById('buton');
 
-    <script>
-        const usernameInput = document.getElementById('username');
-        const passwordInput = document.getElementById('password');
-        const submitButton = document.getElementById('buton');
-
-        // Store username-password pairs in an object
-        const users = {
-            "GulKarenAca": "JTLE32OX127275QJ",
-            "AdanurNas": "207B8MM46DAMIOY0",
-            "PoyrazBahcivan": "XG3U8PEAG3HPH6NL",
-            "YigitEfeNas": "N84OX2XD0BW84BXQ",
-            "AhmetTunaBalci": "OLO42XZ1DW3DJ10A",
-            "ArdaBoraKarahan": "Y6W0409Y63UPHF0V",
-            "BedirhanAtabay": "9GZLWRDB1W0X7X1Y",
-            "BejanYilmaz": "4D0CTRA0AO94L9D3",
-            "DilaKurbanoglu": "515TXW5KQ7KBL4ZT",
-            "DilvinLacin": "EDGF5A6Z8YGZKUI8",
-            "ElifGulceBatgi": "HN3OHJEJ4UQ6JSLU",
-            "EzgiCakirgoz": "SRSHWTIYS7ZVQ5LD",
-            "IklimToklu": "UVALQHJ361RVNAQQ",
-            "Sara Bozyel": "YNF4Q4NC0AEZJ865",
-        };
-
-        submitButton.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the form from submitting
-
-            const username = usernameInput.value;
-            const password = passwordInput.value;
-
-            // Check if the entered username exists in the 'users' object
-            if (users.hasOwnProperty(username) && users[username] === password) {
-                alert("Login successful!"); // Display a success message
-            } else {
-                alert("Login failed. Please check your credentials."); // Display an error message
-            }
-        });
-    </script>
-</body>
-</html>
+submitButon.addEventListener('click', (event) => {
+    const username = usernameInput.value; 
+    const password = passwordInput.value; 
+    authenticateUser (username, password);
+})
+function authenticateUser(username, password) {
+    if (username == "HevselSSL" && password == "q9w12E14M218120502") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "GulKarenAca" && password == "JTLE32OX127275QJ") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "AdanurNas" && password == "207B8MM46DAMIOY0") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "PoyrazBahcivan" && password == "XG3U8PEAG3HPH6NL") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "YigitEfeNas" && password == "N84OX2XD0BW84BXQ") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "AhmetTunaBalci" && password == "OLO42XZ1DW3DJ10A") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "ArdaBoraKarahan" && password == "Y6W0409Y63UPHF0V") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "BedirhanAtabay" && password == "9GZLWRDB1W0X7X1Y") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "BejanYilmaz" && password == "4D0CTRA0AO94L9D3") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "DilaKurbanoglu" && password == "515TXW5KQ7KBL4ZT") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "DilvinLacin" && password == "EDGF5A6Z8YGZKUI8") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "ElifGulceBatgi" && password == "HN3OHJEJ4UQ6JSLU") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "EzgiCakirgoz" && password == "SRSHWTIYS7ZVQ5LD") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "IklimToklu" && password == "UVALQHJ361RVNAQQ") {
+        window.location.replace("list/ssl.html");
+    } else if (username == "Sara Bozyel" && password == "YNF4Q4NC0AEZJ865") {
+        window.location.replace("list/ssl.html");
+    }
+}
