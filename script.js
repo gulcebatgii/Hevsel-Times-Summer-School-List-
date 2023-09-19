@@ -36,7 +36,10 @@ function authenticateUser(username, password) {
         window.location.replace("list/ssl.html");
     } else if (username == "IklimToklu" && password == "UVALQHJ361RVNAQQ") {
         window.location.replace("list/ssl.html");
-    } else if (username == "Sara Bozyel" && password == "YNF4Q4NC0AEZJ865") {
+    } else if (username == "SaraBozyel" && password == "YNF4Q4NC0AEZJ865") {
+        window.location.replace("list/ssl.html");
+    }
+    else if (username == "YeldaNazUsal" && password == "S656LF0ZKF6F299B") {
         window.location.replace("list/ssl.html");
     }
 }
