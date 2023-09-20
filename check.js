@@ -10,3 +10,6 @@
         console.log(localStorage.getItem('authenticated'));
         return localStorage.getItem('authenticated') === 'true';
     }
+    window.addEventListener("beforeunload", function(e){
+        localStorage.setItem('authenticated', 'false');
+     });
