@@ -11,6 +11,7 @@ function authenticateUser (username, password){
     console.log ("auuuuuuu");
     if(username == "HevselSSL" && password == "q9w12E14M218120502") {
         console.log ("if");
-        window.location.replace ("list/ssl.html");
+        const newLocal = "if";
+        window.location.replace ("menu.html");
     }
 }

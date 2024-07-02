@@ -6,6 +6,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Hevsel-Times-Summer-School-List-"
+		"liveServer.settings.multiRootWorkspaceName": "Hevsel-Times-Summer-School-List-",
+		"liveServer.settings.port": 5501
 	}
 }
