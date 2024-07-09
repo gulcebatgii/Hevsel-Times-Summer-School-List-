@@ -9,7 +9,7 @@ submitButon.addEventListener('click', (event) => {
 function authenticateUser(username, password) {
     if (username == "HevselSSL" && password == "q9w12E14M218120502") {
         localStorage.setItem('authenticated', 'true');
-        window.location.replace("list/ssl.html");
+        window.location.replace("menu.html");
     } else if (username == "GulKarenAca" && password == "JTLE32OX127275QJ") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("list/ssl.html");
