@@ -64,6 +64,11 @@ input{
 .pass-box{
     margin-bottom: -30px;
 }
+body {
+    background: url('college.png') no-repeat center center fixed; 
+    background-size: cover;
+    background-size: 100% 100%; 
+}
 .menu-container {
     background-color: #D6001C;
     border: 1px solid #000000;
