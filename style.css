@@ -20,9 +20,9 @@
     margin-top: -30px;
 }
 body {
-    background-image: url("college.png");
+    background-image: url("college.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%; 
+    background-size: cover; 
 }
 html {
     width: 100%;
