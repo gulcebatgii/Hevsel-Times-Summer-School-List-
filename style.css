@@ -98,6 +98,8 @@ body {
     padding: 15px 30px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px; 
 }
 
 .menu-button:hover {
