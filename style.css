@@ -71,12 +71,20 @@ body {
 .menu-container {
     background-color: #D6001C;
     border: 1px solid #000000;
-    padding: 40px;
-    border-radius: 10px;
+    background-color: rgba(214, 0, 28, 0.8); 
+    padding: 40px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 90%; 
-    margin: 50px auto;
-    max-width: 400px; 
+    width: 440px; 
+    height: 484px; 
+    opacity: 0.7;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
 }
 
 .menu-container h2 {
