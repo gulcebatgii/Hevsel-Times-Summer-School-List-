@@ -31,6 +31,7 @@ body {
     flex-direction: column;
     gap: 30px;
     align-items: center; 
+    flex-direction: column;
 }
 
 .menu-button {
@@ -43,6 +44,7 @@ body {
     transition: background-color 0.3s ease;
     width: 100%;
     max-width: 300px; 
+    text-align: center;
 }
 
 .menu-button:hover {
