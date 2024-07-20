@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="style1.css"> 
     <script src="../check.js" defer></script>
     <style>
-        /* Add inline CSS for logout button positioning */
         #logoutButton {
             position: fixed;
             top: 10px;
             left: 10px;
-            background-color: #f44336; /* Red color */
+            background-color: #f44336;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -22,12 +21,11 @@
         }
         
         #logoutButton:hover {
-            background-color: #d32f2f; /* Darker red on hover */
+            background-color: #d32f2f;
         }
     </style>
 </head>
-<body style="background: url('college.png') no-repeat center center fixed; background-size: cover; opacity: 0.8;">
-    <!-- Logout Button -->
+<body style="background: url('college.png') no-repeat center center fixed; background-size: cover; opacity: 0.5;">
     <button id="logoutButton">Log Out</button>
     
     <div class="menu-container">
@@ -46,14 +44,14 @@
             
             if (logoutButton) {
                 logoutButton.addEventListener('click', function() {
-                    logout(); // Call the logout function
+                    logout();
                 });
             }
         });
 
         function logout() {
             localStorage.setItem('authenticated', 'false');
-            window.location.href = '../index.html'; // Redirect to login page after logout
+            window.location.href = '../index.html';
         }
     </script>
 </body>
