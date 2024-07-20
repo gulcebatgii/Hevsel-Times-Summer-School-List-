@@ -9,14 +9,19 @@ function authenticatedUser() {
 
 window.addEventListener('load', function() {
     sessionStorage.setItem('sessionActive', 'true');
+    const tabId = `tab_${Date.now()}_${Math.random()}`;
+    sessionStorage.setItem('tabId', tabId);
+    localStorage.setItem(tabId, 'true');
 });
 
 window.addEventListener('beforeunload', function() {
-    sessionStorage.removeItem('sessionActive');
+    const tabId = sessionStorage.getItem('tabId');
+    localStorage.removeItem(tabId);
 
     setTimeout(function() {
-        if (!sessionStorage.getItem('sessionActive')) {
+        let activeTabs = Object.keys(localStorage).filter(key => key.startsWith('tab_'));
+        if (activeTabs.length === 0) {
             localStorage.setItem('authenticated', 'false');
         }
-    }, 1000);
+    }, 100);
 });
