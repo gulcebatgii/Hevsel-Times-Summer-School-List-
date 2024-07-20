@@ -7,26 +7,16 @@ function authenticatedUser() {
     return localStorage.getItem('authenticated') === 'true';
 }
 
-function updateTabCount(increment) {
-    let tabCount = parseInt(sessionStorage.getItem('tabCount')) || 0;
-    tabCount += increment;
-    sessionStorage.setItem('tabCount', tabCount);
-}
-
 window.addEventListener('load', function() {
-    updateTabCount(1);
+    sessionStorage.setItem('sessionActive', 'true');
 });
 
 window.addEventListener('beforeunload', function() {
-    updateTabCount(-1);
+    sessionStorage.removeItem('sessionActive');
 
-    if (parseInt(sessionStorage.getItem('tabCount')) === 0) {
-        localStorage.setItem('authenticated', 'false');
-    }
-});
-
-window.addEventListener('unload', function() {
-    if (parseInt(sessionStorage.getItem('tabCount')) === 0) {
-        localStorage.setItem('authenticated', 'false');
-    }
+    setTimeout(function() {
+        if (!sessionStorage.getItem('sessionActive')) {
+            localStorage.setItem('authenticated', 'false');
+        }
+    }, 1000);
 });
