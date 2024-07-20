@@ -1,5 +1,5 @@
 function authenticatedUser() {
-    return localStorage.getItem('authenticated') === 'true';
+    return sessionStorage.getItem('authenticated') === 'true';
 }
 
 function checkAuthentication() {
@@ -8,11 +8,9 @@ function checkAuthentication() {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", checkAuthentication);
-
 function logout() {
-    localStorage.setItem('authenticated', 'false');
+    sessionStorage.setItem('authenticated', 'false');
     window.location.href = '../index.html';
 }
 
@@ -24,3 +22,25 @@ function attachLogoutHandlers() {
 }
 
 document.addEventListener("DOMContentLoaded", attachLogoutHandlers);
+function handleTabClose() {
+    const isLastTab = window.sessionStorage.getItem('isLastTab') === 'true';
+    if (isLastTab) {
+        sessionStorage.setItem('authenticated', 'false');
+    }
+}
+
+function checkLastTab() {
+    let tabCount = parseInt(sessionStorage.getItem('tabCount') || '0');
+    tabCount += 1;
+    sessionStorage.setItem('tabCount', tabCount);
+    window.addEventListener('beforeunload', () => {
+        tabCount -= 1;
+        sessionStorage.setItem('tabCount', tabCount);
+        if (tabCount <= 0) {
+            sessionStorage.setItem('isLastTab', 'true');
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", checkLastTab);
+document.addEventListener("visibilitychange", handleTabClose);
