@@ -1,5 +1,18 @@
 function authenticatedUser() {
-    return sessionStorage.getItem('authenticated') === 'true';
+    const authStatus = sessionStorage.getItem('authenticated');
+    const expirationTime = sessionStorage.getItem('expirationTime');
+
+    if (authStatus === 'true' && expirationTime) {
+        const currentTime = new Date().getTime();
+        if (currentTime > expirationTime) {
+            sessionStorage.setItem('authenticated', 'false');
+            sessionStorage.removeItem('expirationTime');
+            return false;
+        }
+        return true;
+    }
+
+    return false;
 }
 
 function checkAuthentication() {
@@ -9,10 +22,13 @@ function checkAuthentication() {
 }
 
 document.addEventListener("DOMContentLoaded", checkAuthentication);
+
 function logout() {
     sessionStorage.setItem('authenticated', 'false');
+    sessionStorage.removeItem('expirationTime');
     window.location.href = '../index.html';
 }
+
 
 function attachLogoutHandlers() {
     const logoutButtons = document.querySelectorAll('.logout-button');
@@ -21,26 +37,11 @@ function attachLogoutHandlers() {
     });
 }
 
+
 document.addEventListener("DOMContentLoaded", attachLogoutHandlers);
-function handleTabClose() {
-    const isLastTab = window.sessionStorage.getItem('isLastTab') === 'true';
-    if (isLastTab) {
-        sessionStorage.setItem('authenticated', 'false');
-    }
-}
 
-function checkLastTab() {
-    let tabCount = parseInt(sessionStorage.getItem('tabCount') || '0');
-    tabCount += 1;
-    sessionStorage.setItem('tabCount', tabCount);
-    window.addEventListener('beforeunload', () => {
-        tabCount -= 1;
-        sessionStorage.setItem('tabCount', tabCount);
-        if (tabCount <= 0) {
-            sessionStorage.setItem('isLastTab', 'true');
-        }
-    });
+function login() {
+    sessionStorage.setItem('authenticated', 'true');
+    const expirationTime = new Date().getTime() + 30 * 60 * 1000;
+    sessionStorage.setItem('expirationTime', expirationTime);
 }
-
-document.addEventListener("DOMContentLoaded", checkLastTab);
-document.addEventListener("visibilitychange", handleTabClose);
