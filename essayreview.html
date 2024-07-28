@@ -12,14 +12,13 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
             background-color: #8F0013;
             background-attachment: fixed; 
             background-position: center; 
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .iframe-container {
@@ -31,23 +30,19 @@
             padding: 20px; 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow-y: auto; 
-            height: 100%; 
-            display: flex;
-            flex-direction: column;
-          
+            overflow: hidden; 
         }
 
        iframe {
             border: 0;
             border-radius: 10px;
-            width: 60%;
-            height: 100%;
-            margin-top: 65px;
+            width: 100%;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
+    <div class="iframe-container">
     <iframe src="https://form.jotform.com/241742635683967"></iframe>
 </body>
 </html>
