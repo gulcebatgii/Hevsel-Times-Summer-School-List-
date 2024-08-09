@@ -5,7 +5,7 @@ body {
 .menu-container {
     background-color: #D6001C;
     border: 1px solid #000000;
-    background-color: rgba(214, 0, 28, 0.8); 
+    background-color: rgba(214, 0, 28); 
     padding: 40px; 
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
