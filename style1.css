@@ -32,7 +32,6 @@ body {
     gap: 30px;
     align-items: center; 
     flex-direction: column;
-    opacity: 1;
 }
 
 .menu-button {
@@ -46,6 +45,7 @@ body {
     width: 100%;
     max-width: 300px; 
     text-align: center;
+    opacity: 1;
 }
 
 .menu-button:hover {
