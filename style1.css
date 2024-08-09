@@ -34,6 +34,7 @@ body {
 }
 
 .menu-button {
+    opacity: 1;
     display: inline-block;
     text-decoration: none;
     color: #000000;
@@ -42,8 +43,7 @@ body {
     border-radius: 5px;
     width: 100%;
     max-width: 300px; 
-    text-align: center;
-    opacity: 1;
+    text-align: center;    
 }
 
 .menu-button:hover {
