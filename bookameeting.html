@@ -8,23 +8,24 @@
     <link type="text/css" rel="stylesheet" href="resources/sheet.css" >
     <script src="../check.js" defer></script>
     <style type="text/css">
+    .top-strip {
+            width: 100%; 
+            height: 60px; 
+            background-color: #8F0013; 
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            z-index: 1000; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
         body {
             padding-top: 60px; 
             margin: 0;
             font-family: "Barlow";
             background-color: #8F0013;
-            align-items: center; 
-            justify-content: center;
-        }
-        .top-strip {
-            width: 100%;
-            height: 60px;
-            background-color: #8F0013;
-            position: fixed;
-            left: 0; 
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-        }
+    }
+
 
       .iframe-container {
             width: 80%;
