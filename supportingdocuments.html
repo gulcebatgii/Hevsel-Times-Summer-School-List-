@@ -10,41 +10,37 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: "Barlow", sans-serif;
+            font-family: "Barlow";
             background-color: #8F0013;
             color: white;
             text-align: center;
             padding: 50px 0;
         }
-
-        .pdf-container {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-        }
-
-        .pdf-container img {
+       .pdf-container a img {
             width: 150px;
             height: auto;
             border: 2px solid white;
             border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .pdf-container a img:hover {
+            transform: scale(1.05);
         }
 
         .pdf-container a {
-            display: block;
-            margin-top: 10px;
-            font-size: 16px;
-            color: white;
             text-decoration: none;
+            color: white;
         }
 
-        .pdf-container a:hover {
-            text-decoration: underline;
+        .pdf-title {
+            margin-top: 10px;
+            font-size: 16px;
+        }
         }
     </style>
 </head>
 <body>
-    <h1>PDF Uploads</h1>
 
     <div class="pdf-container">
         <a href="path-to-your-pdf1.pdf" target="_blank">
