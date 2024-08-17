@@ -14,7 +14,7 @@
     border-radius: 15px;
     display: grid;
     place-items: center;
-    font-family: Barlow;
+    font-family: 'LibreBaskerville';
 }
 .box div{
     margin-top: -30px;
