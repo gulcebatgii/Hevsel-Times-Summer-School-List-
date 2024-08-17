@@ -16,9 +16,6 @@ function authenticateUser(username, password) {
     } else if (username == "YigitEfeNas" && password == "L2ERES8N484M82AI99L0") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
-    } else if (username == "PoyrazBahcivan" && password == "MFK2CDLD0B06TV4S7QWW") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
     } else if (username == "ArdaBoraKarahan" && password == "G50DTH0KFTVIH7N89CCP") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
@@ -31,19 +28,13 @@ function authenticateUser(username, password) {
     } else if (username == "ElifGulceBatgi" && password == "CNB7YOTKAMJ6504AJ9GY") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
-    } else if (username == "EzgiCakirgoz" && password == "VDIC282LJQM067T674GT") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
     } else if (username == "CemilYildiz" && password == "BT2TT6JUN850OV8Y7B91") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
     } else if (username == "ZeryaAslan" && password == "JAUEU3KDG58L4V3BZ6IU") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
-    } else if (username == "AdarOzalkak" && password == "ICC1D67LF3QXYAPVJ3KN") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
-    } else if (username == "BercimBadeEren" && password == "H24LH9D7RVN0MX13WGH4") {
+    } else if (username == "BelcimBadeEren" && password == "H24LH9D7RVN0MX13WGH4") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
     } else if (username == "BarisCavus" && password == "G2AVAZ35QLR597J1GM2R") {
@@ -61,16 +52,10 @@ function authenticateUser(username, password) {
     } else if (username == "EvraHaspolat" && password == "X8X2VXA3NJP46FS7RUP4") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
-    } else if (username == "HariyeHejaEsen" && password == "4I5E6R2523OXWNV1TG4Y") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
     } else if (username == "JirDaraAkcan" && password == "BT2ABXA8S00KE78Y1M4B") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");  
     } else if (username == "JiyanTekay" && password == "L8W1K47YQB7M7GKDMA0S") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");   
-    } else if (username == "KeremMuldur" && password == "03Q21Z85IXDV5BEDEZ76") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");   
     } else if (username == "ArdaKizilkaya" && password == "Z1JD380PRN9P35DHIC0N") {
