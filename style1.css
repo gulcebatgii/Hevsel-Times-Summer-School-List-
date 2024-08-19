@@ -1,7 +1,6 @@
 body {
     background: url('college.jpg') no-repeat center center fixed; 
     background-size: cover;
-    font-family: 'LibreBaskerville';
 }
 .menu-container {
     background-color: #D6001C;
@@ -11,6 +10,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: 'LibreBaskerville';
     width: 440px; 
     height: 484px; 
     position: fixed;
@@ -26,6 +26,7 @@ body {
     margin-bottom: 25px;
     color: #ffffff;
     opacity: 1;
+    font-family: 'LibreBaskerville';
 }
 
 .button-container {
@@ -40,6 +41,7 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #000000;
+    font-family: 'LibreBaskerville';
     font-weight: bold;
     background-color: #ffffff; 
     padding: 15px 30px;
@@ -51,6 +53,7 @@ body {
 
 .menu-button:hover {
     background-color: #ab8256;
+    font-family: 'LibreBaskerville';
 }
    
   
