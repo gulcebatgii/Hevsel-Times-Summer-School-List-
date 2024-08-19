@@ -4,7 +4,6 @@ body {
 }
 .menu-container {
     background-color: #D6001C;
-    border: 1px solid #000000;
     background-color: rgba(214, 0, 28, 0.8); 
     padding: 40px; 
     border-radius: 15px;
@@ -42,6 +41,7 @@ body {
     text-decoration: none;
     color: #000000;
     font-family: LibreBaskerville';
+    font-weight: bold;
     background-color: #ffffff; 
     padding: 15px 30px;
     border-radius: 5px;
@@ -52,7 +52,6 @@ body {
 
 .menu-button:hover {
     background-color: #ab8256;
-    font-family: 'LibreBaskerville';
 }
    
   
