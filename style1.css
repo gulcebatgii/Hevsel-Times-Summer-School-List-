@@ -18,6 +18,7 @@ body {
     transform: translate(-50%, -50%);
     display: grid;
     place-items: center;
+    font-family: 'Libre Baskerville';
 }
 
 .menu-container h2 {
