@@ -1,15 +1,12 @@
-@font-face {
-    font-family: 'LibreBaskerville';
-    src: url('LibreBaskerville-Regular.ttf') format('truetype');    
-    font-weight: normal;
+.libre-baskerville-regular {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400; /* Regular */
 }
 
-@font-face {
-    font-family: 'LibreBaskerville';
-    src: url('LibreBaskerville-Bold.ttf') format('truetype');
-    font-weight: bold;
+.libre-baskerville-bold {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700; /* Bold */
 }
-
 .box{
     position: fixed;
     top: 50%;
@@ -22,7 +19,7 @@
     border-radius: 15px;
     display: grid;
     place-items: center;
-    font-family: 'LibreBaskerville';
+    font-family: 'Libre Baskerville';
 }
 .box div{
     margin-top: -30px;
@@ -55,7 +52,7 @@ html {
     margin-bottom: 20px;
     border-radius: 7px;
     cursor: pointer;
-    font-family: 'LibreBaskerville';
+    font-family: 'Libre Baskerville';
 }
 input{
     width: 100%;
