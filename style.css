@@ -1,11 +1,11 @@
 .libre-baskerville-regular {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400; 
 }
 
 .libre-baskerville-bold {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 700; /* Bold */
+    font-weight: 700; 
 }
 .box{
     position: fixed;
