@@ -62,6 +62,7 @@ input{
     box-sizing: border-box;
     border-radius: 7px;
     border: 1.4px solid #000000;
+    font-family: 'Libre Baskerville';
 }
 .user-box{
     margin-bottom: -40px;
