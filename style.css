@@ -55,6 +55,7 @@ html {
     margin-bottom: 20px;
     border-radius: 7px;
     cursor: pointer;
+    font-family: 'LibreBaskerville';
 }
 input{
     width: 100%;
