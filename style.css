@@ -1,7 +1,15 @@
 @font-face {
     font-family: 'LibreBaskerville';
-    src: url('LibreBaskerville-Regular.ttf') format('truetype');
+    src: url('LibreBaskerville-Regular.ttf') format('truetype');    
+    font-weight: normal;
 }
+
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url('LibreBaskerville-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
 .box{
     position: fixed;
     top: 50%;
