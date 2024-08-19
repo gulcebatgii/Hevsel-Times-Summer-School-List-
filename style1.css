@@ -9,7 +9,6 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: 'LibreBaskerville';
     width: 440px; 
     height: 484px; 
     position: fixed;
@@ -25,7 +24,6 @@ body {
     margin-bottom: 25px;
     color: #ffffff;
     opacity: 1;
-    font-family: 'LibreBaskerville';
 }
 
 .button-container {
@@ -40,8 +38,8 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #000000;
-    font-family: LibreBaskerville';
-    font-weight: bold;
+    font-family: Libre Baskerville';
+    font-weight: 700;
     background-color: #ffffff; 
     padding: 15px 30px;
     border-radius: 5px;
