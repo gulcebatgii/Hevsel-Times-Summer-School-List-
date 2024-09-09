@@ -88,7 +88,7 @@ function authenticateUser(username, password) {
      } else if (username == "YusufDuzgoren" && password == "B7X0T5V2R4M8J9Q1L6P") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
-     } else if (username == "EmirTaha" && password == "D3G9L1P8R7F0T5K2M6J") {
+     } else if (username == "EmirTahaMacit" && password == "D3G9L1P8R7F0T5K2M6J") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
     } else{
