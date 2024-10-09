@@ -86,7 +86,7 @@ function authenticateUser(username, password) {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
      } else if (username == "LavaBagdu" && password == "G9J5Y2L1T3D0P8K4F6") {
-        ocalStorage.setItem('authenticated', 'true');
+        localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
     } else{
         localStorage.setItem('authenticated', 'false');
