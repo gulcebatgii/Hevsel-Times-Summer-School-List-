@@ -31,9 +31,6 @@ function authenticateUser(username, password) {
     } else if (username == "DamlaZeryaAslan" && password == "JAUEU3KDG58L4V3BZ6IU") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
-    } else if (username == "BelcimBadeEren" && password == "H24LH9D7RVN0MX13WGH4") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
     } else if (username == "BarisCavus" && password == "G2AVAZ35QLR597J1GM2R") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
