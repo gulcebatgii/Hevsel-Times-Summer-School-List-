@@ -84,6 +84,7 @@ function authenticateUser(username, password) {
         window.location.replace("menu.html");       
     } else{
         localStorage.setItem('authenticated', 'false');
+        console.log(`Failed login attempt: Username - ${username}, Password - ${password}`);
     }
 }
 
