@@ -34,9 +34,6 @@ function authenticateUser(username, password) {
     } else if (username == "BarisCavus" && password == "G2AVAZ35QLR597J1GM2R") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
-    } else if (username == "MuhammedEminAcar" && password == "91MG4UVFNWSUVA8VB25P") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
     } else if (username == "MuhammedEminYasul" && password == "85BA5D95PLP6L6OH9T4H") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
@@ -78,7 +75,7 @@ function authenticateUser(username, password) {
         window.location.replace("menu.html");    
      } else if (username == "EmirTahaMacit" && password == "D3G9L1P8R7F0T5K2M6J") {
         localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");       
+        window.location.replace("menu.html");  
     } else{
         localStorage.setItem('authenticated', 'false');
         console.log(`Failed login attempt: Username - ${username}, Password - ${password}`);
