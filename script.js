@@ -76,6 +76,9 @@ function authenticateUser(username, password) {
      } else if (username == "EmirTahaMacit" && password == "D3G9L1P8R7F0T5K2M6J") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");  
+     } else if (username == "DenizYavuz" && password == "F6T1R8J7L0P9Q2M3K5D") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html");  
     } else{
         localStorage.setItem('authenticated', 'false');
         console.log(`Failed login attempt: Username - ${username}, Password - ${password}`);
