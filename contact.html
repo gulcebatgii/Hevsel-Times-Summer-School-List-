@@ -1,294 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Hevsel Times</title>
-    <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon">
-    <link type="text/css" rel="stylesheet" href="resources/sheet.css" >
-    <script src="../check.js" defer></script>
-    <style type="text/css">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Hevsel Times</title>
+  <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="resources/sheet.css" />
+  <script src="../check.js" defer></script>
+  <style>
     body {
-            margin: 0;
-            padding: 0;
-            font-family: 'LibreBaskerville';
-            background-color: #ffffff;
-            color: black; 
-            
-        }
+      margin: 0;
+      padding: 0;
+      font-family: 'LibreBaskerville';
+      background-color: #ffffff;
+      color: black;
+    }
 
-       .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 20px;
-            padding: 20px;
-        }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
 
-        .contact-person {
-            text-align: center;
-        }
+    .contact-person {
+      text-align: center;
+    }
 
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
 
-        .contact-details p {
-            margin: 5px 0;
-        }
+    .contact-details p {
+      margin: 5px 0;
+    }
 
-        @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
+    .final-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
 
-            .profile-photo {
-                width: 100px;
-                height: 100px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+      .final-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
-   <div class="contact-grid">
-         
-            <div class="contact-person">
-                <img src="adanurnas.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Adanur Nas</p>
-                    <p>Columbia University</p>
-                    <p>Computer Science</p>
-                    <p>+90 530 292 48 13</p>
-                </div>
-            </div>
-       
-   <div class="contact-person">
-                <img src="alibehram.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Ali Behram Gumus</p>
-                    <p>Karlsruhe Institute of Technology </p>
-                    <p>Mechanical Engineering</p>
-                    <p>+90 538 397 03 30</p>
-                </div>
-            </div>
-       
-            <div class="contact-person">
-                <img src="arjendemir.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Arjen Demir</p>
-                    <p>University of Pennsylvania</p>
-                     <p>Cinema and Media Studies</p>
-                    <p>+1 987 654 321</p>
-                </div>
-            </div>
-
-            <div class="contact-person">
-                <img src="avjinaktop.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Avjin Aktop</p>
-                    <p>New York University Abu Dhabi</p>
-                    <p>Political Science & Economics</p>
-                    <p>‪+971 50 713 6880‬</p>     
-                </div>
-            </div>
-                              
-          <div class="contact-person">
-                <img src="azrabaysal.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Azra Baysal</p>
-                    <p>Bocconi University</p>
-                    <p>Economics</p>
-                    <p>+39 344 427 9242</p>
-                </div>
-            </div>
-       
-  <div class="contact-person">
-                <img src="bejantekay.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Bejan Tekay</p>
-                    <p>Pennsylvania State University</p>
-                    <p>Chemical Engineering</p>
-                    <p>+90 533 055 15 90</p>
-                </div>
-            </div>
-       
-               <div class="contact-person">
-                <img src="bercemsevinc.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Bercem Sevinc</p>
-                    <p>Bocconi University</p>
-                    <p>Economics</p>
-                    <p>+39 344 424 3587</p>
-                </div>
-            </div>
-       
-         <div class="contact-person">
-                <img src="beyzakaya.png" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Beyza Kaya</p>
-                    <p>Stanford University</p>
-                     <p>Environmental Enngineering</p>
-                    <p>+90 536 519 75 11</p>
-                </div>
-            </div>
-       
-   <div class="contact-person">
-                <img src="zeryaaslan.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Damla Zerya Aslan</p>
-                    <p>New York University Abu Dhabi</p>
-                     <p>Major</p>
-                    <p>+90 553 860 04 12</p>
-                </div>
-            </div>
-       
-               <div class="contact-person">
-                <img src="dicleezgiekinci.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Dicle Ezgi Ekinci</p>
-                    <p>Harvard University</p>
-                     <p>Molecular and Cellular Biology</p>
-                    <p>+1 (617) 642-2086</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="diyarkarabulut.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Diyar Karabulut</p>
-                    <p>New York University Abu Dhabi</p>
-                     <p>Electrical Engineering</p>
-                    <p>+90 533 308 87 37</p>
-                </div>
-            </div>
-         
-       <div class="contact-person">
-                <img src="efesakarya.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Efe Sakarya</p>
-                    <p>California Institute of Technology</p>
-                     <p>Bioengineering</p>
-                    <p>+90 551 388 73 18</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="gulkarenaca.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Gul Karen Aca</p>
-                    <p>Stanford University</p>
-                     <p>Neuroscience</p>
-                    <p>+1 (650) 283-0034</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="gulbinatli.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Gulbin Atli</p>
-                    <p>Stanford University</p>
-                     <p>Mechanical Engineering</p>
-                    <p>+90 553 088 18 59</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="lorintanircan.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Lorin Tanircan</p>
-                    <p>Queen Mary University of London</p>
-                     <p>Major</p>
-                    <p>+44 7442 684259</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="muhammedemirakat.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Muhammed Emir Akat</p>
-                    <p>Dartmouth College</p>
-                     <p>Major</p>
-                    <p>+1 (603) 667-3514</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="muhammedmirackoyun.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Muhammed Mirac Koyun</p>
-                    <p>Polytechnic University of Turin</p>
-                    <p>Major</p>
-                    <p>+39 389 538 8011</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="nehirtoklu.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Nehir Toklu</p>
-                    <p>Harvard University</p>
-                     <p>Evolutionary Biology</p>
-                    <p>+1 (617) 866-1175</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="pirservantutsi.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Pir Servan Tutsi</p>
-                    <p>Brown University</p>
-                    <p>Mathematics & Philosophy</p>
-                    <p>+1 (401) 394-9511</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="seyitmetinbarut.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Seyit Metin Barut</p>
-                    <p>Brown University</p>
-                     <p>Computer Science</p>
-                    <p>+1 (401) 867-1338</p>
-                </div>
-            </div>
-
-               <div class="contact-person">
-                <img src="siyarozmen.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Siyar Ozmen</p>
-                    <p>Karlsruhe Institute of Technology</p>
-                     <p>Mechanical Engineering</p>
-                    <p>+49 176 84153996</p>
-                </div>
-            </div>
-       
-   <div class="contact-person">
-                <img src="yagmurcengiz.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Yagmur Delal Cengiz</p>
-                    <p>Brown University</p>
-                     <p>Physics</p>
-                    <p>+90 553 877 54 37</p>
-                </div>
-            </div>
-       
-               <div class="contact-person">
-                <img src="yarenyurt.jpg" alt="Profile Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Yaren Yurt</p>
-                    <p>Harvard University</p>
-                     <p>Neuroscience</p>
-                     <p>+90 531 675 99 25</p>
-                </div>
-            </div>
-        
-        </div>
-
+  <div class="contact-grid">
+    <div class="contact-person">
+      <img src="adanurnas.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Adanur Nas</p>
+        <p>Columbia University</p>
+        <p>Computer Science</p>
+        <p>+90 530 292 48 13</p>
+      </div>
     </div>
+
+    <div class="contact-person">
+      <img src="alibehram.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Ali Behram Gumus</p>
+        <p>Karlsruhe Institute of Technology</p>
+        <p>Mechanical Engineering</p>
+        <p>+90 538 397 03 30</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="arjendemir.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Arjen Demir</p>
+        <p>University of Pennsylvania</p>
+        <p>Cinema and Media Studies</p>
+        <p>+1 987 654 321</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="avjinaktop.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Avjin Aktop</p>
+        <p>New York University Abu Dhabi</p>
+        <p>Political Science & Economics</p>
+        <p>‪+971 50 713 6880‬</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="azrabaysal.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Azra Baysal</p>
+        <p>Bocconi University</p>
+        <p>Economics</p>
+        <p>+39 344 427 9242</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="bejantekay.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Bejan Tekay</p>
+        <p>Pennsylvania State University</p>
+        <p>Chemical Engineering</p>
+        <p>+90 533 055 15 90</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="bercemsevinc.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Bercem Sevinc</p>
+        <p>Bocconi University</p>
+        <p>Economics</p>
+        <p>+39 344 424 3587</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="beyzakaya.png" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Beyza Kaya</p>
+        <p>Stanford University</p>
+        <p>Environmental Engineering</p>
+        <p>+90 536 519 75 11</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="zeryaaslan.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Damla Zerya Aslan</p>
+        <p>New York University Abu Dhabi</p>
+        <p>Major</p>
+        <p>+90 553 860 04 12</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="dicleezgiekinci.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Dicle Ezgi Ekinci</p>
+        <p>Harvard University</p>
+        <p>Molecular and Cellular Biology</p>
+        <p>+1 (617) 642-2086</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="diyarkarabulut.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Diyar Karabulut</p>
+        <p>New York University Abu Dhabi</p>
+        <p>Electrical Engineering</p>
+        <p>+90 533 308 87 37</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="efesakarya.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Efe Sakarya</p>
+        <p>California Institute of Technology</p>
+        <p>Bioengineering</p>
+        <p>+90 551 388 73 18</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="gulkarenaca.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Gul Karen Aca</p>
+        <p>Stanford University</p>
+        <p>Neuroscience</p>
+        <p>+1 (650) 283-0034</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="gulbinatli.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Gulbin Atli</p>
+        <p>Stanford University</p>
+        <p>Mechanical Engineering</p>
+        <p>+90 553 088 18 59</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="lorintanircan.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Lorin Tanircan</p>
+        <p>Queen Mary University of London</p>
+        <p>Major</p>
+        <p>+44 7442 684259</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="muhammedemirakat.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Muhammed Emir Akat</p>
+        <p>Dartmouth College</p>
+        <p>Major</p>
+        <p>+1 (603) 667-3514</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="muhammedmirackoyun.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Muhammed Mirac Koyun</p>
+        <p>Polytechnic University of Turin</p>
+        <p>Major</p>
+        <p>+39 389 538 8011</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="nehirtoklu.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Nehir Toklu</p>
+        <p>Harvard University</p>
+        <p>Evolutionary Biology</p>
+        <p>+1 (617) 866-1175</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="pirservantutsi.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Pir Servan Tutsi</p>
+        <p>Brown University</p>
+        <p>Mathematics & Philosophy</p>
+        <p>+1 (401) 394-9511</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="seyitmetinbarut.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Seyit Metin Barut</p>
+        <p>Brown University</p>
+        <p>Computer Science</p>
+        <p>+1 (401) 867-1338</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="siyarozmen.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Siyar Ozmen</p>
+        <p>Karlsruhe Institute of Technology</p>
+        <p>Mechanical Engineering</p>
+        <p>+49 176 84153996</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SON SATIR - ORTALANMIŞ 2 KİŞİ -->
+  <div class="final-row">
+    <div class="contact-person">
+      <img src="yagmurcengiz.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Yagmur Delal Cengiz</p>
+        <p>Brown University</p>
+        <p>Physics</p>
+        <p>+90 553 877 54 37</p>
+      </div>
+    </div>
+
+    <div class="contact-person">
+      <img src="yarenyurt.jpg" alt="Profile Photo" class="profile-photo"/>
+      <div class="contact-details">
+        <p>Yaren Yurt</p>
+        <p>Harvard University</p>
+        <p>Neuroscience</p>
+        <p>+90 531 675 99 25</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-
