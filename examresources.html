@@ -116,3 +116,145 @@
 <header>
   <h1>Exam Resources</h1>
 </header>
+
+  <div id="main">
+
+  <div class="section-title">AP</div>
+  <div class="subtopics">
+    <button onclick="openPage('ap-bio')">Biology</button>
+    <button onclick="openPage('ap-chem')">Chemistry</button>
+    <button onclick="openPage('ap-calc')">Calculus</button>
+  </div>
+
+  <div class="section-title">SAT</div>
+  <div class="subtopics">
+    <button onclick="openPage('sat-math')">Math</button>
+    <button onclick="openPage('sat-reading')">Reading</button>
+  </div>
+
+  <div class="section-title">IELTS</div>
+  <div class="subtopics">
+    <button onclick="openPage('ielts-writing')">Writing</button>
+    <button onclick="openPage('ielts-speaking')">Speaking</button>
+  </div>
+
+</div>
+
+<!-- AP Biology -->
+<div id="ap-bio" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>AP Biology Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/ap-bio-notes.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Chapter 1 Notes</div>
+      </a>
+    </div>
+    <div class="pdf-item">
+      <a href="resources/ap-bio-summary.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Unit Summary</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Diğer sayfalar aynı mantıkla -->
+<div id="ap-chem" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>AP Chemistry Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/ap-chem-formulas.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Formula Sheet</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="ap-calc" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>AP Calculus Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/ap-calc-guide.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Derivatives Guide</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="sat-math" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>SAT Math Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/sat-math-practice.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Practice Test</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="sat-reading" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>SAT Reading Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/sat-reading.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Reading Tips</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="ielts-writing" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>IELTS Writing Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/ielts-writing.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Sample Essays</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="ielts-speaking" class="page">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <h2>IELTS Speaking Resources</h2>
+  <div class="pdf-container">
+    <div class="pdf-item">
+      <a href="resources/ielts-speaking.pdf" target="_blank">
+        <img src="pdf-icon.png" alt="PDF">
+        <div class="pdf-title">Speaking Topics</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Hevsel Times. All rights reserved.
+</footer>
+
+<script>
+  function openPage(id) {
+    document.getElementById("main").style.display = "none";
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  function goBack() {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById("main").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
