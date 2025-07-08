@@ -86,16 +86,16 @@
       cursor: pointer;
     }
 
-    a.pdf-title,
-a.pdf-title:visited,
-a.pdf-title:hover,
-a.pdf-title:active {
-  margin-top: 10px;
-  font-size: 16px;
-  text-decoration: none !important;
-  color: black !important;
-  display: inline-block; /* margin-top çalışsın diye */
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .pdf-title {
+      margin-top: 10px;
+      font-size: 16px;
+      color: black;
+    }
 
     .back-btn {
       position: fixed;       
