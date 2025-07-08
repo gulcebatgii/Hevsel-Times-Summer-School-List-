@@ -26,11 +26,38 @@
         #logoutButton:hover {
             background-color: #ab8256;
         }
+
+        .menu-container {
+            background-color: rgba(179, 38, 38, 0.85);
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .menu-button {
+            display: block;
+            margin: 12px auto;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-family: 'LibreBaskerville';
+            text-decoration: none;
+            background-color: #f5f5f5;
+            color: #333;
+            border-radius: 10px;
+            width: 80%;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #e0e0e0;
+        }
     </style>
 </head>
 <body style="background: url('College2.jpg') no-repeat center center fixed; background-size: cover;">
     <button id="logoutButton">Log Out</button>
-    
+
     <div class="menu-container">
         <h2>Welcome to SSL</h2>
         <div class="button-container">
@@ -40,13 +67,13 @@
             <a href="supportingdocuments.html" class="menu-button">Supporting Documents</a>
             <a href="contact.html" class="menu-button">Contact</a>
             <a href="examresources.html" class="menu-button">Exam Resources</a>
+            <a href="professorhub.html" class="menu-button">Professor Hub</a>
         </div>
     </div>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const logoutButton = document.getElementById('logoutButton');
-            
             if (logoutButton) {
                 logoutButton.addEventListener('click', function() {
                     logout();
