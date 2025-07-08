@@ -26,6 +26,35 @@
         #logoutButton:hover {
             background-color: #ab8256;
         }
+
+        .menu-container {
+            background-color: rgba(179, 38, 38, 0.85); /* Kırmızı arka plan */
+            padding: 60px 40px;                       /* İç boşluklar genişletildi */
+            border-radius: 20px;                      /* Köşeler yumuşatıldı */
+            width: 420px;                             /* Genişlik artırıldı */
+            min-height: 720px;                        /* Yüksekliğe alt sınır kondu */
+            margin: 100px auto;                       /* Ortalanması sağlandı */
+            text-align: center;                       /* Metin ortalı */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);   /* Gölgelendirme */
+        }
+
+        .menu-button {
+            display: block;
+            margin: 12px auto;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-family: 'LibreBaskerville';
+            text-decoration: none;
+            background-color: #f5f5f5;
+            color: #333;
+            border-radius: 10px;
+            width: 80%;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #e0e0e0;
+        }
     </style>
 </head>
 <body style="background: url('College2.jpg') no-repeat center center fixed; background-size: cover;">
@@ -47,7 +76,6 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const logoutButton = document.getElementById('logoutButton');
-            
             if (logoutButton) {
                 logoutButton.addEventListener('click', function() {
                     logout();
