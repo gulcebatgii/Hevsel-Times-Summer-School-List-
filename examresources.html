@@ -93,22 +93,18 @@
     }
 
     .back-btn {
+      position: fixed;       
+      top: 20px;         
+      left: 20px;
       background-color: #960700;
       color: white;
       border: none;
       padding: 10px 20px;
       border-radius: 6px;
       cursor: pointer;
-      margin-bottom: 20px;
       font-size: 1em;
-    }
+      z-index: 1000;         
 
-    footer {
-      background-color: #960700;
-      color: white;
-      padding: 20px;
-      margin-top: 60px;
-    }
   </style>
 </head>
 <body>
@@ -154,15 +150,8 @@
     <button onclick="openPage('ap-french')">AP World History</button>
   </div>
 
-  <div class="section-title">SAT</div>
-    <div class="subtopics">
-    <button onclick="openPage('sat')">SAT</button>
-  </div>
-
-  <div class="section-title">IELTS</div>
-    <div class="subtopics">
-    <button onclick="openPage('ielts')">IELTS</button>
-  </div>
+<button class="section-button" onclick="openPage('sat')">SAT</button>
+<button class="section-button" onclick="openPage('ielts')">IELTS</button>
 
 </div>
 
@@ -1373,9 +1362,7 @@
 
 
 
-<footer>
-  &copy; 2025 Hevsel Times. All rights reserved.
-</footer>
+
 
 <script>
   function openPage(id) {
