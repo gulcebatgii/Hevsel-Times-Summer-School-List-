@@ -1,92 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu | Hevsel Times</title>
-    <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style1.css"> 
-    <script src="../check.js" defer></script>
-    <style>
-        #logoutButton {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            opacity: 1;
-            color: white;
-            background-color: #d32f2f;
-            font-family: 'LibreBaskerville';
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        
-        #logoutButton:hover {
-            background-color: #ab8256;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu | Hevsel Times</title>
+  <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style1.css" />
+  <script src="../check.js" defer></script>
+  <style>
+    #logoutButton {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      opacity: 1;
+      color: white;
+      background-color: #d32f2f;
+      font-family: 'LibreBaskerville';
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-        .menu-container {
-            background-color: rgba(179, 38, 38, 0.85); /* Kırmızı arka plan */
-            padding: 60px 40px;                       /* İç boşluklar genişletildi */
-            border-radius: 20px;                      /* Köşeler yumuşatıldı */
-            width: 420px;                             /* Genişlik artırıldı */
-            min-height: 720px;                        /* Yüksekliğe alt sınır kondu */
-            margin: 100px auto;                       /* Ortalanması sağlandı */
-            text-align: center;                       /* Metin ortalı */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);   /* Gölgelendirme */
-        }
+    #logoutButton:hover {
+      background-color: #ab8256;
+    }
 
-        .menu-button {
-            display: block;
-            margin: 12px auto;
-            padding: 12px 20px;
-            font-size: 16px;
-            font-family: 'LibreBaskerville';
-            text-decoration: none;
-            background-color: #f5f5f5;
-            color: #333;
-            border-radius: 10px;
-            width: 80%;
-            transition: background-color 0.3s;
-        }
-
-        .menu-button:hover {
-            background-color: #e0e0e0;
-        }
-    </style>
-</head>
-<body style="background: url('College2.jpg') no-repeat center center fixed; background-size: cover;">
-    <button id="logoutButton">Log Out</button>
-    
-    <div class="menu-container">
-        <h2>Welcome to SSL</h2>
-        <div class="button-container">
-            <a href="ssl.html" class="menu-button">Summer School List</a>
-            <a href="bookameeting.html" class="menu-button">Book a Meeting</a>
-            <a href="essayreview.html" class="menu-button">Essay Review</a> 
-            <a href="supportingdocuments.html" class="menu-button">Supporting Documents</a>
-            <a href="contact.html" class="menu-button">Contact</a>
-            <a href="examresources.html" class="menu-button">Exam Resources</a>
-            <a href="ProfesrHub.html" class="menu-button">Professor Hub</a>
-        </div>
-    </div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const logoutButton = document.getElementById('logoutButton');
-            if (logoutButton) {
-                logoutButton.addEventListener('click', function() {
-                    logout();
-                });
-            }
-        });
-
-        function logout() {
-            localStorage.setItem('authenticated', 'false');
-            window.location.href = '../index.html';
-        }
-    </script>
-</body>
-</html>
+    .menu-container {
+      background-color: rgba(179, 38, 38, 0.85);
+      padding: 60px 40px;
+      border-radius: 20px;
+      width: 420px;
+      min-height: 72
