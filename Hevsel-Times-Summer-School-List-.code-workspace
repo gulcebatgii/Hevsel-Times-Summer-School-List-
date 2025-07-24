@@ -9,7 +9,6 @@
   <script src="../check.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-    
     body {
       font-family: 'Libre Baskerville', serif;
       margin: 0;
@@ -18,15 +17,13 @@
       background-size: cover;
       min-height: 100vh;
     }
-
     #logoutButton {
       position: fixed;
       top: 10px;
       left: 10px;
-      opacity: 1;
       color: white;
       background-color: #d32f2f;
-      font-family: 'Libre Baskerville';
+      font-family: 'Libre Baskerville', serif;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
@@ -34,18 +31,16 @@
       border-radius: 5px;
       z-index: 1000;
     }
-
     #logoutButton:hover {
       background-color: #ab8256;
     }
-
     .back-button {
       position: fixed;
       top: 10px;
       right: 10px;
       color: white;
       background-color: #d32f2f;
-      font-family: 'Libre Baskerville';
+      font-family: 'Libre Baskerville', serif;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
@@ -54,11 +49,9 @@
       text-decoration: none;
       z-index: 1000;
     }
-
     .back-button:hover {
       background-color: #ab8256;
     }
-
     .container {
       background-color: rgba(179, 38, 38, 0.85);
       padding: 24px 40px 40px 40px;
@@ -70,18 +63,15 @@
       text-align: center;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
-
     h1 {
       color: white;
       font-size: 2.5em;
       margin-bottom: 30px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
-
     .search-container {
       margin-bottom: 20px;
     }
-
     .search-input {
       width: 300px;
       padding: 12px;
@@ -90,7 +80,6 @@
       border-radius: 10px;
       font-family: 'Libre Baskerville', serif;
     }
-
     .table-container {
       background-color: rgba(255, 255, 255, 0.95);
       border-radius: 15px;
@@ -98,13 +87,11 @@
       margin-top: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
       font-family: 'Libre Baskerville', serif;
     }
-
     th {
       background-color: #b32626;
       color: white;
@@ -113,78 +100,63 @@
       text-align: left;
       font-size: 16px;
     }
-
     td {
       padding: 12px 10px;
       border-bottom: 1px solid #e0e0e0;
       vertical-align: top;
     }
-
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-
     tr:hover {
       background-color: #f0f0f0;
     }
-
     .program-name {
       font-weight: 700;
       color: #b32626;
     }
-
     .eligibility {
       font-style: italic;
       color: #666;
     }
-
     .link-cell {
       max-width: 300px;
       word-wrap: break-word;
     }
-
     .link-cell a {
       color: #d32f2f;
       text-decoration: none;
       font-size: 14px;
       line-height: 1.4;
     }
-
     .link-cell a:hover {
       text-decoration: underline;
     }
-
     .no-results {
       text-align: center;
       padding: 40px;
       color: #666;
       font-size: 18px;
     }
-
     @media (max-width: 768px) {
       .container {
         width: 95%;
         padding: 20px;
         margin: 70px auto 20px auto;
       }
-      
       h1 {
         font-size: 2em;
       }
-      
       .search-input {
         width: 250px;
         font-size: 14px;
       }
-      
       table {
         font-size: 14px;
       }
-      
       th, td {
         padding: 8px 5px;
       }
-      
       .link-cell {
         max-width: 200px;
       }
@@ -194,14 +166,11 @@
 <body>
   <button id="logoutButton">Log Out</button>
   <a href="menu.html" class="back-button">← Back to Menu</a>
-
   <div class="container">
     <h1>Summer School Programs</h1>
-    
     <div class="search-container">
       <input type="text" id="searchInput" class="search-input" placeholder="Search programs, eligibility, or organizations...">
     </div>
-
     <div class="table-container">
       <table id="programsTable">
         <thead>
@@ -212,86 +181,49 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-          <tr>
-            <td class="program-name">PACT</td>
-            <td class="eligibility">finished grade 9+</td>
-            <td class="link-cell"><a href="#" target="_blank">PACT Application</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Laboratory Learning Program</td>
-            <td class="eligibility">16+</td>
-            <td class="link-cell"><a href="#" target="_blank">Laboratory Learning Program</a><br><small>Office of the Dean for Research</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Group Summer Scholars Research Program</td>
-            <td class="eligibility">high school sophomores, juniors, and senior</td>
-            <td class="link-cell"><a href="#" target="_blank">Group Summer Scholars Research Program</a><br><small>Kean University</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Secondary Student Training Program</td>
-            <td class="eligibility">grades 10–11</td>
-            <td class="link-cell"><a href="#" target="_blank">Secondary Student Training Program - Belin-Blank Center</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Summer Science Research Program</td>
-            <td class="eligibility">16+</td>
-            <td class="link-cell"><a href="#" target="_blank">The Rockefeller University Summer Science Research Experience</a></td>
-          </tr>
-          <!-- Diğer programlar buraya eklenecek -->
+          <!-- Program entries go here -->
         </tbody>
       </table>
     </div>
   </div>
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const logoutButton = document.getElementById("logoutButton");
       const searchInput = document.getElementById("searchInput");
       const tableBody = document.getElementById("tableBody");
       const allRows = Array.from(tableBody.querySelectorAll("tr"));
-
-      // Logout functionality
       if (logoutButton) {
         logoutButton.addEventListener("click", function () {
           logout();
         });
       }
-
-      // Search functionality
       if (searchInput) {
-        searchInput.addEventListener("input", function() {
+        searchInput.addEventListener("input", function () {
           const searchTerm = this.value.toLowerCase();
-          
           allRows.forEach(row => {
-            const text = row.textContent.toLowerCase();
-            if (text.includes(searchTerm)) {
-              row.style.display = "";
-            } else {
-              row.style.display = "none";
-            }
+            const text = row.innerText.toLowerCase();
+            row.style.display = text.includes(searchTerm) ? "" : "none";
           });
-
-          // Show "no results" message if no rows are visible
           const visibleRows = allRows.filter(row => row.style.display !== "none");
+          const existingNoResults = document.querySelector('.no-results');
           if (visibleRows.length === 0 && searchTerm.trim() !== "") {
-            if (!document.querySelector('.no-results')) {
+            if (!existingNoResults) {
               const noResultsRow = document.createElement('tr');
-              noResultsRow.className = 'no-results';
-              noResultsRow.innerHTML = '<td colspan="3" class="no-results">No programs found matching your search.</td>';
+              const noResultsTd = document.createElement('td');
+              noResultsTd.colSpan = 3;
+              noResultsTd.className = 'no-results';
+              noResultsTd.innerText = 'No programs found matching your search.';
+              noResultsRow.appendChild(noResultsTd);
               tableBody.appendChild(noResultsRow);
             }
-          } else {
-            const noResultsRow = document.querySelector('.no-results');
-            if (noResultsRow) {
-              noResultsRow.remove();
-            }
+          } else if (existingNoResults) {
+            existingNoResults.parentElement.remove();
           }
         });
       }
     });
-
     function logout() {
-      localStorage.setItem("authenticated", "false");
+      localStorage.clear();
       window.location.href = "../index.html";
     }
   </script>
