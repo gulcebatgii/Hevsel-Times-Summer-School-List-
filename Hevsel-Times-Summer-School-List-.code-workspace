@@ -25,8 +25,8 @@
       left: 10px;
       opacity: 1;
       color: white;
-      background-color: #D32F2F;
-      font-family: 'LibreBaskerville';
+      background-color: #d32f2f;
+      font-family: 'Libre Baskerville';
       border: none;
       padding: 10px 20px;
       font-size: 16px;
@@ -36,7 +36,7 @@
     }
 
     #logoutButton:hover {
-      background-color: #AB8256;
+      background-color: #ab8256;
     }
 
     .back-button {
@@ -44,8 +44,8 @@
       top: 10px;
       right: 10px;
       color: white;
-      background-color: #D32F2F;
-      font-family: 'LibreBaskerville';
+      background-color: #d32f2f;
+      font-family: 'Libre Baskerville';
       border: none;
       padding: 10px 20px;
       font-size: 16px;
@@ -56,7 +56,7 @@
     }
 
     .back-button:hover {
-      background-color: #AB8256;
+      background-color: #ab8256;
     }
 
     .container {
@@ -121,16 +121,16 @@
     }
 
     tr:nth-child(even) {
-      background-color: #F9F9F9;
+      background-color: #f9f9f9;
     }
 
     tr:hover {
-      background-color: #F0F0F0;
+      background-color: #f0f0f0;
     }
 
     .program-name {
       font-weight: 700;
-      color: #B32626;
+      color: #b32626;
     }
 
     .eligibility {
@@ -144,7 +144,7 @@
     }
 
     .link-cell a {
-      color: #D32F2F;
+      color: #d32f2f;
       text-decoration: none;
       font-size: 14px;
       line-height: 1.4;
@@ -215,419 +215,85 @@
           <tr>
             <td class="program-name">PACT</td>
             <td class="eligibility">finished grade 9+</td>
-            <td class="link-cell"><a href="#">PACT Application</a></td>
+            <td class="link-cell"><a href="#" target="_blank">PACT Application</a></td>
           </tr>
           <tr>
             <td class="program-name">Laboratory Learning Program</td>
             <td class="eligibility">16+</td>
-            <td class="link-cell"><a href="#">Laboratory Learning Program</a><br><small>Office of the Dean for Research</small></td>
+            <td class="link-cell"><a href="#" target="_blank">Laboratory Learning Program</a><br><small>Office of the Dean for Research</small></td>
           </tr>
           <tr>
             <td class="program-name">Group Summer Scholars Research Program</td>
             <td class="eligibility">high school sophomores, juniors, and senior</td>
-            <td class="link-cell"><a href="#">Group Summer Scholars Research Program</a><br><small>Kean University</small></td>
+            <td class="link-cell"><a href="#" target="_blank">Group Summer Scholars Research Program</a><br><small>Kean University</small></td>
           </tr>
           <tr>
             <td class="program-name">Secondary Student Training Program</td>
             <td class="eligibility">grades 10–11</td>
-            <td class="link-cell"><a href="#">Secondary Student Training Program - Belin-Blank Center</a></td>
+            <td class="link-cell"><a href="#" target="_blank">Secondary Student Training Program - Belin-Blank Center</a></td>
           </tr>
           <tr>
             <td class="program-name">Summer Science Research Program</td>
             <td class="eligibility">16+</td>
-            <td class="link-cell"><a href="#">The Rockefeller University » Summer Science Research Experience - RockEDU Science Outreach</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Summer High School Internship Program</td>
-            <td class="eligibility">rising 12th graders</td>
-            <td class="link-cell"><a href="#">Summer High School Internship Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Science and Technology Entry Program</td>
-            <td class="eligibility">grades 7-12</td>
-            <td class="link-cell"><a href="#">Science and Technology Entry Program (STEP)</a><br><small>New York State Education Department</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Summer@Brown</td>
-            <td class="eligibility">15+</td>
-            <td class="link-cell"><a href="#">Apply | Pre-College Program</a><br><small>Brown University</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Management of Technology Summer Institute</td>
-            <td class="eligibility">no specific age range</td>
-            <td class="link-cell"><a href="#">Management & Technology Summer Institute</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Wharton Sports Business Academy</td>
-            <td class="eligibility">grades 10-11</td>
-            <td class="link-cell"><a href="#">Sports Business Academy - Wharton Global Youth Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">SCA National Crews</td>
-            <td class="eligibility">15 to 19 years old</td>
-            <td class="link-cell"><a href="#">National Crews - Student Conservation Association</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Princeton Laboratory Learning Program</td>
-            <td class="eligibility">16+</td>
-            <td class="link-cell"><a href="#">Laboratory Learning Program</a><br><small>Office of the Dean for Research</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">SCAD Rising Stars</td>
-            <td class="eligibility">high school juniors</td>
-            <td class="link-cell"><a href="#">SCAD Rising Star</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">SPARC</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">SPARC Camp</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">UC Chicago Summer Session</td>
-            <td class="eligibility">high school freshmen, sophomores, and juniors (14+)</td>
-            <td class="link-cell"><a href="#">Pre-College Students | UChicago Summer Session</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">ESTEEM</td>
-            <td class="eligibility">completed 11th grade by June 2023</td>
-            <td class="link-cell"><a href="#">ESTEEM/SER-Quest Summer Program</a><br><small>A. James Clark School of Engineering, University of Maryland</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">High School Summer Scholars Program</td>
-            <td class="eligibility">graduating in 2024, TOEFL score of at least 90</td>
-            <td class="link-cell"><a href="#">High School Summer Scholars Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Economics For Leaders</td>
-            <td class="eligibility">sophomores and juniors</td>
-            <td class="link-cell"><a href="#">Economics for Leaders</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">UC Davis Young Scholars Program</td>
-            <td class="eligibility">16+</td>
-            <td class="link-cell"><a href="#">Young Scholars Program - UC Davis School of Education</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Pre-College University of Notre Dame</td>
-            <td class="eligibility">freshmen, sophomores, and juniors + (will be rising seniors)</td>
-            <td class="link-cell"><a href="#">Notre Dame Pre-College Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Stanford Mathematics Camp</td>
-            <td class="eligibility">grades 10-11</td>
-            <td class="link-cell"><a href="#">Stanford University Mathematics Camp (SUMaC)</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Stanford Medical Youth Science Program</td>
-            <td class="eligibility">juniors</td>
-            <td class="link-cell"><a href="#">Stanford Medical Youth Science Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">UC Berkeley ATDP</td>
-            <td class="eligibility">grades 7-11</td>
-            <td class="link-cell"><a href="#">Secondary Division 2023 | UC Berkeley ATDP</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">PROMYS</td>
-            <td class="eligibility">age 14-18</td>
-            <td class="link-cell"><a href="#">Application – PROMYS | Program in Mathematics for Young Scientists</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">NYC Summer Academy</td>
-            <td class="eligibility">grades 10-12</td>
-            <td class="link-cell"><a href="#">NYC Summer Academy</a><br><small>The School of The New York Times</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">YALE-Yale Summer Program in Astrophysics</td>
-            <td class="eligibility">junior or rising senior</td>
-            <td class="link-cell"><a href="#">The Yale Summer Program in Astrophysics</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Summer Science Program (SSP)</td>
-            <td class="eligibility">15-19</td>
-            <td class="link-cell"><a href="#">Summer Science Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Cornell Pre-College Program</td>
-            <td class="eligibility">grades 10,11,12</td>
-            <td class="link-cell"><a href="#">Apply for Online Courses - Apply - Precollege Studies</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Smith College Summer Pre-College Program</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">Summer Precollege Programs</a><br><small>Smith College</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">The Anson L. Clark Scholars Program</td>
-            <td class="eligibility">17+</td>
-            <td class="link-cell"><a href="#">Welcome to The Anson L. Clark Scholars Program</a><br><small>TTU</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Pioneer Academics</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">Application Management</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">UC Santa Cruz-SIP</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">Applying to SIP – Science Internship Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">RSI</td>
-            <td class="eligibility">students apply in the middle of their junior year</td>
-            <td class="link-cell"><a href="#">Apply to RSI</a><br><small>Center for Excellence in Education</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">YYGS</td>
-            <td class="eligibility">high school sophomore or junior</td>
-            <td class="link-cell"><a href="#">Yale Young Global Scholars</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Notre Dame</td>
-            <td class="eligibility">high school freshmen, sophomores, and juniors</td>
-            <td class="link-cell"><a href="#">Summer Scholars Online</a><br><small>Office of Pre-College Programs | University of Notre Dame</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">RISE</td>
-            <td class="eligibility">between the ages of 15 and 17</td>
-            <td class="link-cell"><a href="#">Rise</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">SUMaC</td>
-            <td class="eligibility">10th or 11th grade at the time of application</td>
-            <td class="link-cell"><a href="#">SUMaC Admissions</a><br><small>Stanford Pre-Collegiate Studies</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">HCSSIM</td>
-            <td class="eligibility">-</td>
-            <td class="link-cell"><a href="#">Apply! - HCSSiM</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">MathLY</td>
-            <td class="eligibility">-</td>
-            <td class="link-cell"><a href="#">Apply to {MathILy, MathILy-Er}</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Google CSSI</td>
-            <td class="eligibility">graduating high school seniors in the US or Canada</td>
-            <td class="link-cell"><a href="#">Google Computer Science Summer Institute (CSSI)</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">LaunchX</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">LaunchX</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Harvard Secondary School Program</td>
-            <td class="eligibility">will graduate from high school and enter college in 2023, 2024, or 2025</td>
-            <td class="link-cell"><a href="#">Secondary School Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">YGA</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">YGA</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Ross Mathematics Program</td>
-            <td class="eligibility">15 - 18</td>
-            <td class="link-cell"><a href="#">Ross Mathematics Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">New York Times</td>
-            <td class="eligibility">15-18</td>
-            <td class="link-cell"><a href="#">NYC Summer Academy</a><br><small>The School of The New York Times</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">JIPP</td>
-            <td class="eligibility">at least 16 years of age by May</td>
-            <td class="link-cell"><a href="#">JIPP</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">MITES</td>
-            <td class="eligibility">us citizens or permanent residents and high school juniors</td>
-            <td class="link-cell"><a href="#">Apply to MITES!</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">MIT WTP</td>
-            <td class="eligibility">11th grade</td>
-            <td class="link-cell"><a href="#">MIT Women's Technology Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">COSMOS</td>
-            <td class="eligibility">grades 8-12</td>
-            <td class="link-cell"><a href="#">COSMOS Home</a><br><small>Jacobs School of Engineering</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Honors Summer Math Camp</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">Honors Summer Math Camp : Mathworks : Texas State University</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Canada/USA Math Program</td>
-            <td class="eligibility">ages 13–18</td>
-            <td class="link-cell"><a href="#">Canada/USA Mathcamp</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Simons Summer Research Program</td>
-            <td class="eligibility">junior, us citizens or permanent residents</td>
-            <td class="link-cell"><a href="#">Simons Summer Research Program</a><br><small>Stony Brook University</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">UCSB RMP</td>
-            <td class="eligibility">10th or 11th grade</td>
-            <td class="link-cell"><a href="#">Research Mentorship Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">BISEP</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">BİSEP - BAU TIP Bilim İnsanı Seçme Programı Hakkında</a><br><small>BAU | Bahçeşehir Üniversitesi</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">SIMR</td>
-            <td class="eligibility">junior, us citizens or permanent residents</td>
-            <td class="link-cell"><a href="#">Stanford Institutes of Medicine Summer Research Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">M&TSI UPenn</td>
-            <td class="eligibility">-</td>
-            <td class="link-cell"><a href="#">Management & Technology Summer Institute</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">CMU SAMS</td>
-            <td class="eligibility">junior, us citizens or permanent residents</td>
-            <td class="link-cell"><a href="#">Summer Academy for Math and Science - Pre-College Programs - Carnegie Mellon University</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">MOSTEC</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="https://oeop.mit.edu/programs/mostec">MOSTEC Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">MathLyE</td>
-            <td class="eligibility">14-17</td>
-            <td class="link-cell"><a href="http://www.mathily.org/">MathILy</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">RMP/SRA</td>
-            <td class="eligibility">9th 10th and 11th grade</td>
-            <td class="link-cell"><a href="https://www.summer.ucsb.edu/pre-college/pre-college-programs">UCSB Pre-College Programs</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Steminist</td>
-            <td class="eligibility">high school senior</td>
-            <td class="link-cell"><a href="#">STEMinist Scholarship Fund — Calculated Genius</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">WTP</td>
-            <td class="eligibility">11th grade</td>
-            <td class="link-cell"><a href="#">MIT Women's Technology Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Research Science Institute</td>
-            <td class="eligibility">11th grade</td>
-            <td class="link-cell"><a href="https://www.cee.org/research-science-institute">RSI Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Northwestern CTD AP ASO</td>
-            <td class="eligibility">11th and 12th grade</td>
-            <td class="link-cell"><a href="#">Summer Programs</a><br><small>Northwestern Center for Talent Development</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Summer Scholars Research Program</td>
-            <td class="eligibility">17+</td>
-            <td class="link-cell"><a href="#">Winship Summer Scholars</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Duke University Summer College</td>
-            <td class="eligibility">10th and 11th grade students</td>
-            <td class="link-cell"><a href="#">Credit Course Options | Summer Session</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Carnegie Mellon</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">Application Management</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">NC State University</td>
-            <td class="eligibility">9th and 10th grade</td>
-            <td class="link-cell"><a href="#">Summer Programs for High School Students</a><br><small>College of Engineering</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Boston Summer Challenge</td>
-            <td class="eligibility">at least 14 years old</td>
-            <td class="link-cell"><a href="#">Summer Challenge</a><br><small>Boston University Summer Term</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Boston High School Honors</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">High School Honors</a><br><small>Boston University Summer Term</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Boston Tanglewood Institute</td>
-            <td class="eligibility">between ages of 14-20</td>
-            <td class="link-cell"><a href="#">Boston University Tanglewood Institute (BUTI) » Pre-College And Youth Summer Programs</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Awesome Math Summer Program</td>
-            <td class="eligibility">between ages of 12 and 18</td>
-            <td class="link-cell"><a href="#">Program Information - AwesomeMath</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Canada/USA MathCamp</td>
-            <td class="eligibility">between ages of 13 and 18</td>
-            <td class="link-cell"><a href="#">Canada/USA Mathcamp</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Welch Summer Science Program</td>
-            <td class="eligibility">between ages of 13 and 18</td>
-            <td class="link-cell"><a href="#">Welch Summer Scholar Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">William&Mary Pre-College Program</td>
-            <td class="eligibility">13+</td>
-            <td class="link-cell"><a href="#">Pre-College Programs</a><br><small>William & Mary</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">The Summer Science</td>
-            <td class="eligibility">between ages of 12 and 18</td>
-            <td class="link-cell"><a href="https://summerscience.org/admissions/how-to-apply/">Summer Science Program</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">The Summer Leaders Experience</td>
-            <td class="eligibility">17</td>
-            <td class="link-cell"><a href="#">Summer Leaders Experience</a><br><small>United States Military Academy West Point</small></td>
-          </tr>
-          <tr>
-            <td class="program-name">Naval Academy Summer Seminar</td>
-            <td class="eligibility">17</td>
-            <td class="link-cell"><a href="#">Applying to Naval Academy Summer Seminar (NASS)</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Academy Introduction Mission</td>
-            <td class="eligibility">between ages of 16 and 18</td>
-            <td class="link-cell"><a href="#">AIM - United States Coast Guard Academy</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Commonwealth Honors Academy</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">2023 Commonwealth Honors Academy</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Emory/Morehouse SOM/GA Tech</td>
-            <td class="eligibility">high school juniors</td>
-            <td class="link-cell"><a href="#">Emory University Events - Atlanta</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">University of Minnesota</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="https://cse.umn.edu/college/k-12-outreach/summer-camps">Summer Camps</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Air Force Research Laboratory</td>
-            <td class="eligibility">high school students</td>
-            <td class="link-cell"><a href="#">Air Force Research Laboratory</a></td>
-          </tr>
-          <tr>
-            <td class="program-name">Telluride Association Summer Program</td>
-            <td class="eligibility">high school students</td>
-            <t
+            <td class="link-cell"><a href="#" target="_blank">The Rockefeller University Summer Science Research Experience</a></td>
+          </tr>
+          <!-- Diğer programlar buraya eklenecek -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const logoutButton = document.getElementById("logoutButton");
+      const searchInput = document.getElementById("searchInput");
+      const tableBody = document.getElementById("tableBody");
+      const allRows = Array.from(tableBody.querySelectorAll("tr"));
+
+      // Logout functionality
+      if (logoutButton) {
+        logoutButton.addEventListener("click", function () {
+          logout();
+        });
+      }
+
+      // Search functionality
+      if (searchInput) {
+        searchInput.addEventListener("input", function() {
+          const searchTerm = this.value.toLowerCase();
+          
+          allRows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+              row.style.display = "";
+            } else {
+              row.style.display = "none";
+            }
+          });
+
+          // Show "no results" message if no rows are visible
+          const visibleRows = allRows.filter(row => row.style.display !== "none");
+          if (visibleRows.length === 0 && searchTerm.trim() !== "") {
+            if (!document.querySelector('.no-results')) {
+              const noResultsRow = document.createElement('tr');
+              noResultsRow.className = 'no-results';
+              noResultsRow.innerHTML = '<td colspan="3" class="no-results">No programs found matching your search.</td>';
+              tableBody.appendChild(noResultsRow);
+            }
+          } else {
+            const noResultsRow = document.querySelector('.no-results');
+            if (noResultsRow) {
+              noResultsRow.remove();
+            }
+          }
+        });
+      }
+    });
+
+    function logout() {
+      localStorage.setItem("authenticated", "false");
+      window.location.href = "../index.html";
+    }
+  </script>
+</body>
+</html>
