@@ -78,17 +78,18 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
+  margin-top: 20px;
 }
 
 .pdf-item {
-  width: auto;                 
+  width: 120px; /* PDF kutusunun genişliği */
   text-align: center;
 }
 
 .pdf-item img {
-  width: 80px !important;      
-  height: auto !important;
+  width: 100%; /* kutunun içini doldur ama küçük tut */
+  height: auto;
   border-radius: 6px;
   cursor: pointer;
   display: block;
@@ -96,23 +97,12 @@ h1 {
 }
 
 .pdf-title {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 6px;
   color: #960700;
   text-align: center;
 }
 
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.pdf-title {
-  margin-top: 10px;
-  font-size: 14px; /* font küçültüldü */
-  color: white;
-}
 
 .back-btn {
   position: fixed;
