@@ -123,7 +123,7 @@ a {
   border: 2px solid white;
 }
 
-    .exam-sections {
+ .exam-sections {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -131,30 +131,55 @@ a {
   margin-top: 40px;
 }
 
+/* Her bir bölüm kutusu (AP, SAT, IELTS) */
 .exam-box {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 300px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  background-color: white; /* beyaz kutucuk */
   color: #960700;
+  padding: 25px;
+  border-radius: 14px;
+  width: 320px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.exam-box:hover {
+  transform: translateY(-4px); /* hafif hover animasyonu */
 }
 
 .exam-box .section-title {
   background-color: transparent;
   color: #960700;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+
 
 .exam-box .pdf-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
   align-items: center;
+}
+
+
+.pdf-item {
+  width: 100%;
+}
+
+.pdf-item img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.pdf-title {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #960700;
 }
 
 
