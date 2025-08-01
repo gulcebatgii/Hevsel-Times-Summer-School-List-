@@ -379,12 +379,10 @@
                 row.style.display = found ? '' : 'none';
             }
         });
-        // Back to menu functionality
-        document.querySelector('.back-btn').addEventListener('click', function(e) {
-                window.location.href = 'menu.html';
-            }
+            document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'menu.html';
         });
-        // Add click functionality to table rows
         document.querySelectorAll('tbody tr').forEach(row => {
             row.addEventListener('click', function() {
                 const name = this.querySelector('.professor-name').textContent;
