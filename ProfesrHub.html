@@ -14,7 +14,7 @@
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%234a5d3a" width="1200" height="800"/><rect fill="%236b7d5a" x="0" y="600" width="1200" height="200"/><rect fill="%235a6b4a" x="100" y="200" width="200" height="300" rx="10"/><rect fill="%235a6b4a" x="400" y="150" width="200" height="350" rx="10"/><rect fill="%235a6b4a" x="700" y="180" width="200" height="320" rx="10"/><rect fill="%235a6b4a" x="1000" y="160" width="150" height="340" rx="10"/></svg>') center/cover;
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23dc2626" width="1200" height="800"/><rect fill="%23ef4444" x="0" y="600" width="1200" height="200"/><rect fill="%23b91c1c" x="100" y="200" width="200" height="300" rx="10"/><rect fill="%23b91c1c" x="400" y="150" width="200" height="350" rx="10"/><rect fill="%23b91c1c" x="700" y="180" width="200" height="320" rx="10"/><rect fill="%23b91c1c" x="1000" y="160" width="150" height="340" rx="10"/></svg>') center/cover;
             min-height: 100vh;
             padding: 20px;
         }
@@ -37,22 +37,33 @@
             opacity: 0.9;
         }
 
-        .log-out {
+        .back-btn {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(220, 20, 60, 0.9);
+            top: 15px;
+            left: 15px;
+            background: rgba(74, 85, 104, 0.9);
             color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
             z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .log-out:hover {
-            background: rgba(220, 20, 60, 1);
+        .back-btn:hover {
+            background: rgba(74, 85, 104, 1);
+            transform: translateX(-2px);
+        }
+
+        .back-btn::before {
+            content: "←";
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .container {
@@ -204,28 +215,9 @@
             border-color: #8B4513;
         }
 
+        /* İstatistik bölümünü gizle */
         .stats {
-            display: flex;
-            justify-content: space-around;
-            padding: 15px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #8B4513;
-        }
-
-        .stat-label {
-            font-size: 12px;
-            color: #6c757d;
-            text-transform: uppercase;
+            display: none !important;
         }
 
         @media (max-width: 768px) {
@@ -253,7 +245,7 @@
     </style>
 </head>
 <body>
-    <a href="#" class="log-out">Log Out</a>
+    <a href="#" class="back-btn">Back to Menu</a>
     
     <div class="header">
         <h1>Professor Hub</h1>
@@ -263,25 +255,6 @@
     <div class="container">
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Search professors by name, department, or contact..." id="searchInput">
-        </div>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">15</div>
-                <div class="stat-label">Total Faculty</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">8</div>
-                <div class="stat-label">Departments</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">12</div>
-                <div class="stat-label">Universities</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Status Types</div>
-            </div>
         </div>
         
         <div class="table-container">
@@ -449,11 +422,13 @@
             }
         });
 
-        // Log out functionality
-        document.querySelector('.log-out').addEventListener('click', function(e) {
+        // Back to menu functionality
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            if(confirm('Are you sure you want to log out?')) {
-                alert('Logged out successfully!');
+            if(confirm('Are you sure you want to go back to the main menu?')) {
+                // Burada ana menüye yönlendirme yapabilirsiniz
+                // window.location.href = 'main-menu.html'; // Örnek
+                alert('Redirecting to main menu...');
             }
         });
 
