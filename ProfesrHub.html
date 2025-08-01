@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
@@ -18,25 +17,21 @@
     min-height: 100vh;
     padding: 20px;
 }
-
         .header {
             text-align: center;
             margin-bottom: 30px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
-
         .header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
             font-weight: 300;
         }
-
         .header p {
             font-size: 1.2rem;
             opacity: 0.9;
         }
-
         .back-btn {
             position: absolute;
             top: 15px;
@@ -54,18 +49,15 @@
             align-items: center;
             gap: 6px;
         }
-
         .back-btn:hover {
             background: rgba(211, 47, 47, 1);
             transform: translateX(-2px);
         }
-
         .back-btn::before {
             content: "←";
             font-size: 16px;
             font-weight: bold;
         }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -75,19 +67,16 @@
             overflow: hidden;
             backdrop-filter: blur(10px);
         }
-
         .table-container {
             overflow-x: auto;
             max-height: 70vh;
             overflow-y: auto;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 14px;
         }
-
         thead {
             background: linear-gradient(135deg, #871E1E, #A0522D);
             color: white;
@@ -95,7 +84,6 @@
             top: 0;
             z-index: 10;
         }
-
         th {
             padding: 15px 12px;
             text-align: left;
@@ -104,63 +92,51 @@
             letter-spacing: 0.5px;
             border-right: 1px solid rgba(255,255,255,0.2);
         }
-
         th:last-child {
             border-right: none;
         }
-
         tbody tr {
             transition: all 0.3s ease;
             border-bottom: 1px solid #e0e0e0;
         }
-
         tbody tr:nth-child(even) {
             background-color: #f8f9fa;
         }
-
         tbody tr:hover {
             background-color: #e3f2fd;
             transform: scale(1.01);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
         td {
             padding: 12px;
             border-right: 1px solid #e0e0e0;
             vertical-align: top;
         }
-
         td:last-child {
             border-right: none;
         }
-
         .professor-name {
             font-weight: 600;
             color: #2c3e50;
             font-size: 15px;
         }
-
         .department {
             color: #7f8c8d;
             font-size: 13px;
             line-height: 1.4;
         }
-
         .contact {
             color: #3498db;
             text-decoration: none;
             font-size: 13px;
         }
-
         .contact:hover {
             text-decoration: underline;
         }
-
         .phone {
             color: #27ae60;
             font-weight: 500;
         }
-
         .status {
             padding: 4px 8px;
             border-radius: 12px;
@@ -169,38 +145,31 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
         .status.karen {
             background: #ffebee;
             color: #c62828;
         }
-
         .status.poyraz {
             background: #e8f5e8;
             color: #2e7d32;
         }
-
         .status.yigit {
             background: #fff3e0;
             color: #ef6c00;
         }
-
         .status.ezgi {
             background: #f3e5f5;
             color: #7b1fa2;
         }
-
         .status.arda {
             background: #e0f2f1;
             color: #00695c;
         }
-
         .search-bar {
             padding: 20px;
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             border-bottom: 1px solid #dee2e6;
         }
-
         .search-input {
             width: 100%;
             padding: 12px 20px;
@@ -210,16 +179,13 @@
             outline: none;
             transition: border-color 0.3s ease;
         }
-
         .search-input:focus {
             border-color: #8B4513;
         }
-
         /* İstatistik bölümünü gizle */
         .stats {
             display: none !important;
         }
-
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -249,7 +215,6 @@
     
     <div class="header">
         <h1>Professor Hub</h1>
-        <p>Faculty Directory & Contact Information</p>
     </div>
     
     <div class="container">
@@ -349,37 +314,37 @@
                     <tr>
                        <td class="professor-name">Mauricio Fernández Duque</td>
                         <td class="department">Behavioral Economics, Political Economy / Dartmouth</td>
-                        <td><a href="mailto:adriennechudzinski@stanford.edu" class="contact">mauriciofduque@gmail.com / m.auricio.f.duque@gmail.com</a></td>
+                        <td><a href="mailto:mauriciofduque@gmail.com" class="contact">mauriciofduque@gmail.com / m.auricio.f.duque@gmail.com</a></td>
                         <td><span class="status yigit">Yiğit Efe Nas</span></td>
                     </tr>
                     <tr>
-                            <td class="professor-name">Steve Crowleye</td>
+                        <td class="professor-name">Steve Crowleye</td>
                         <td class="department">Politics, East European Studies, Peace and Conflict / Oberlin</td>
-                        <td><a href="mailto:adriennechudzinski@stanford.edu" class="contact">steve.crowley@oberlin.edu</a></td>
+                        <td><a href="mailto:steve.crowley@oberlin.edu" class="contact">steve.crowley@oberlin.edu</a></td>
                         <td><span class="status yigit">Yiğit Efe Nas</span></td>
                     </tr>
                     <tr>
                       <td class="professor-name">Berkan Güven</td>
                         <td class="department">Mechanical Design Engineer / General Electric</td>
-                        <td><a href="mailto:adriennechudzinski@stanford.edu" class="contact">berkangven@gmail.com</a></td>
+                        <td><a href="mailto:berkangven@gmail.com" class="contact">berkangven@gmail.com</a></td>
                         <td><span class="status yigit">Gülce Batgi</span></td>
                     </tr>
                     <tr>
-                            <td class="professor-name">Murat Şen</td>
+                        <td class="professor-name">Murat Şen</td>
                         <td class="department">Machine Theory and Dinamics / Fırat University</td>
-                        <td><a href="mailto:adriennechudzinski@stanford.edu" class="contact">msen@firat.edu.tr</a></td>
+                        <td><a href="mailto:msen@firat.edu.tr" class="contact">msen@firat.edu.tr</a></td>
                         <td><span class="status yigit">Gülce Batgi</span></td>
                     </tr>
                     <tr>
-                            <td class="professor-name">Şilan Baturay</td>
+                        <td class="professor-name">Şilan Baturay</td>
                         <td class="department">Nuclear Physics / Dicle University</td>
-                        <td><a href="mailto:adriennechudzinski@stanford.edu" class="contact">silan@dicle.edu.tr</a></td>
+                        <td><a href="mailto:silan@dicle.edu.tr" class="contact">silan@dicle.edu.tr</a></td>
                         <td><span class="status yigit">Yelda Naz Usal</span></td>
                     </tr>
                     <tr>
-                            <td class="professor-name">Fatma Matpan</td>
+                        <td class="professor-name">Fatma Matpan</td>
                         <td class="department">Molecular Biology and Genetics / Dicle University</td>
-                        <td><a href="mailto:adriennechudzinski@stanford.edu" class="contact">fatmatpan@hotmail.com/fmatpan@dicle.edu.tr </a></td>
+                        <td><a href="mailto:fatmatpan@hotmail.com" class="contact">fatmatpan@hotmail.com/fmatpan@dicle.edu.tr</a></td>
                         <td><span class="status yigit">Yelda Naz Usal</span></td>
                     </tr>
                     <tr>
@@ -392,7 +357,6 @@
             </table>
         </div>
     </div>
-
     <script>
         // Search functionality
         document.getElementById('searchInput').addEventListener('keyup', function() {
@@ -415,7 +379,6 @@
                 row.style.display = found ? '' : 'none';
             }
         });
-
         // Back to menu functionality
         document.querySelector('.back-btn').addEventListener('click', function(e) {
             e.preventDefault();
@@ -423,7 +386,6 @@
                 window.location.href = 'menu.html';
             }
         });
-
         // Add click functionality to table rows
         document.querySelectorAll('tbody tr').forEach(row => {
             row.addEventListener('click', function() {
