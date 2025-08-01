@@ -13,7 +13,7 @@
         body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23dc2626" width="1200" height="800"/><rect fill="%23ef4444" x="0" y="600" width="1200" height="200"/><rect fill="%23b91c1c" x="400" y="150" width="200" height="350" rx="10"/><rect fill="%23b91c1c" x="700" y="180" width="200" height="320" rx="10"/><rect fill="%23b91c1c" x="1000" y="160" width="150" height="340" rx="10"/></svg>') center/cover;
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%237e0c0c" width="1200" height="800"/><rect fill="%238f1a1a" x="0" y="600" width="1200" height="200"/><rect fill="%236b0909" x="400" y="150" width="200" height="350" rx="10"/><rect fill="%236b0909" x="700" y="180" width="200" height="320" rx="10"/><rect fill="%236b0909" x="1000" y="160" width="150" height="340" rx="10"/></svg>') center/cover;
     min-height: 100vh;
     padding: 20px;
 }
@@ -36,7 +36,7 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            background: rgba(211, 47, 47, 0.9);
+            background: rgba(126, 12, 12, 0.9);
             color: white;
             padding: 8px 16px;
             border-radius: 6px;
@@ -50,7 +50,7 @@
             gap: 6px;
         }
         .back-btn:hover {
-            background: rgba(211, 47, 47, 1);
+            background: rgb(211, 47, 47);
             transform: translateX(-2px);
         }
         .back-btn::before {
@@ -78,7 +78,7 @@
             font-size: 14px;
         }
         thead {
-            background: linear-gradient(135deg, #871E1E, #A0522D);
+            background: linear-gradient(135deg, #7e0c0c, #8B4513);
             color: white;
             position: sticky;
             top: 0;
@@ -180,7 +180,7 @@
             transition: border-color 0.3s ease;
         }
         .search-input:focus {
-            border-color: #8B4513;
+            border-color: #7e0c0c;
         }
         /* İstatistik bölümünü gizle */
         .stats {
@@ -382,7 +382,6 @@
         // Back to menu functionality
         document.querySelector('.back-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            if(confirm('Are you sure you want to go back to the main menu?')) {
                 window.location.href = 'menu.html';
             }
         });
