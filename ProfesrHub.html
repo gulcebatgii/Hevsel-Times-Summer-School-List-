@@ -36,7 +36,7 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            background: rgb(211, 47, 47);
+            background: rgba(211, 47, 47);
             color: white;
             padding: 8px 16px;
             border-radius: 6px;
@@ -50,7 +50,7 @@
             gap: 6px;
         }
         .back-btn:hover {
-            background: rgb(211, 47, 47);
+            background: rgba(211, 47, 47);
             transform: translateX(-2px);
         }
         .back-btn::before {
@@ -381,7 +381,6 @@
         });
         // Back to menu functionality
         document.querySelector('.back-btn').addEventListener('click', function(e) {
-            e.preventDefault();
                 window.location.href = 'menu.html';
             }
         });
