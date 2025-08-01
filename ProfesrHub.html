@@ -329,7 +329,12 @@
                         <td><span class="status poyraz">Poyraz</span></td>
                     </tr>
                     <tr>
-                    
+                        <td class="professor-name">Kaiya Gordon</td>
+                        <td class="department">Feminist Studies / UC santa Cruz</td>
+                        <td><a href="mailto:kamogord@ucsc.edu" class="contact">kamogord@ucsc.edu</a></td>
+                        <td><span class="status yigit">Yiğit Efe Nas</span></td>
+                    </tr>
+                    <tr>
                         <td class="professor-name">Kaiya Gordon</td>
                         <td class="department">Feminist Studies / UC santa Cruz</td>
                         <td><a href="mailto:kamogord@ucsc.edu" class="contact">kamogord@ucsc.edu</a></td>
@@ -417,8 +422,11 @@
             }
         });
 
-     <a href="ProfesrHub.html" class="back-btn">← Back to Professor Hub</a>
-
+        // Back to menu functionality
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            if(confirm('Are you sure you want to go back to the main menu?')) {
+                window.location.href = 'menu.html';
             }
         });
 
