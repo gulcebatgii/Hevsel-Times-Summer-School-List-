@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exam Resources | Hevsel Times</title>
   <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon">
-  <style>
+   <style>
     body {
       background-color: #960700;
       font-family: 'LibreBaskerville', serif;
@@ -16,64 +16,80 @@
     }
 
     h1 {
-      font-size: 2em;
       margin-bottom: 40px;
+      font-size: 2em;
     }
 
-    .exam-section-wrapper {
+    .wrapper {
       display: flex;
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
     }
 
-    .exam-box {
-      background-color: white;
+    .box {
+      background: white;
       color: #960700;
-      padding: 30px 20px;
-      border-radius: 14px;
       width: 260px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .exam-box .section-title {
+    .box h2 {
+      margin: 0 0 20px;
       font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #960700;
     }
 
-    .subtopics {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .box .btn {
       width: 100%;
-    }
-
-    .subtopics a {
-      text-decoration: none;
-    }
-
-    .subtopics button {
-      width: 100%;
-      background: white;
+      background-color: #960700;
+      color: white;
       border: 2px solid #960700;
-      color: #960700;
-      padding: 10px;
-      font-size: 0.95em;
+      padding: 12px;
+      margin-bottom: 12px;
       border-radius: 6px;
+      font-size: 1em;
       cursor: pointer;
       transition: 0.2s;
     }
 
-    .subtopics button:hover {
-      background-color: #960700;
-      color: white;
+    .box .btn:hover {
+      background-color: white;
+      color: #960700;
     }
 
+    .page {
+      display: none;
+      padding: 40px 20px;
+    }
+    .page.active {
+      display: block;
+    }
+
+    .pdf-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .pdf-item {
+      width: 120px;
+      text-align: center;
+    }
+    .pdf-item img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .pdf-item .title {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #960700;
+    }
   </style>
 </head>
 <body>
@@ -120,9 +136,13 @@
     <button onclick="openPage('toefl')">TOEFL</button>
   </div>
     
+<div class="section-title">SAT</div>
+<button class="section-title" onclick="openPage('sateng')">SAT English</button>
+<button class="section-title" onclick="openPage('satmath')">SAT Math</button>
 
-<button class="section-title" onclick="openPage('sat')">SAT</button>
+<div class="section-title">IELTS & TOEFL</div>
 <button class="section-title" onclick="openPage('ielts')">IELTS</button>
+<button class="section-title" onclick="openPage('ielts')">TOEFL</button>
 
 </div>
 
