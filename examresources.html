@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam Resources | Hevsel Times</title>
-  <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon">
-   <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -75,45 +68,27 @@
             color: white;
         }
 
-        .pdf-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 20px;
+        .page {
+            display: none;
+            padding: 20px;
         }
 
-        .pdf-item {
-            width: 80px; /* PDF kutusunun genişliği */
-            text-align: center;
-        }
-
-        .pdf-item img {
-            width: 100%; /* Kutunun içini doldur ama küçük tut */
-            height: auto;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .pdf-title {
-            font-size: 12px;
-            margin-top: 6px;
-            color: #960700;
-            text-align: center;
+        .page.active {
+            display: block;
         }
     </style>
 </head>
 <body>
 
 <header>
-  <h1>Exam Resources</h1>
+    <h1>Sınav Kaynakları</h1>
 </header>
 
-  <div id="main">
-
-  <div class="section-title">AP</div>
-  <div class="subtopics">
-    <button onclick="openPage('ap-arthistory')">AP Art History</button>
+<div class="exam-sections">
+    <div class="exam-box">
+        <div class="section-title">AP</div>
+        <div class="subtopics">
+           <button onclick="openPage('ap-arthistory')">AP Art History</button>
     <button onclick="openPage('ap-bio')">AP Biology</button>
     <button onclick="openPage('ap-calcab')">Calculus AB</button>
     <button onclick="openPage('ap-calcbc')">Calculus BC</button>
@@ -144,18 +119,34 @@
     <button onclick="openPage('ap-usgov')">AP United States Government and Politics</button>
     <button onclick="openPage('ap-ush')">AP United States History</button>
     <button onclick="openPage('ap-world')">AP World History</button>
-    <button onclick="openPage('toefl')">TOEFL</button>
-  </div>
-    
-<div class="section-title">SAT</div>
-<button onclick="openPage('satmath')">SAT English</button>
-<button onclick="openPage('sateng')">SAT Math</button>
+        </div>
+    </div>
 
-<div class="section-title">IELTS & TOEFL</div>
-<button onclick="openPage('ielts')">IELTS</button>
-<button onclick="openPage('toefl')">TOEFL</button>
+    <div class="exam-box">
+        <div class="section-title">SAT</div>
+        <div class="subtopics">
+            <button onclick="openPage('sat-english')">SAT English</button>
+            <button onclick="openPage('sat-math')">SAT Math</button>
+        </div>
+    </div>
 
+    <div class="exam-box">
+        <div class="section-title">IELTS</div>
+        <div class="subtopics">
+            <button onclick="openPage('ielts')">Reading</button>
+        </div>
+    </div>
+
+    <div class="exam-box">
+        <div class="section-title">TOEFL</div>
+        <div class="subtopics">
+            <button onclick="openPage('toefl')">Reading</button>
+        </div>
+    </div>
 </div>
+
+
+  <div id="main">
 
 <!-- ART HİSTORY -->
 <div id="ap-arthistory" class="page">
@@ -2776,7 +2767,7 @@
 </div>
 
   
-<div id="sat" class="page">
+<div id="sat-math" class="page">
   <button class="back-btn" onclick="goBack()">← Back</button>
   <h2>SAT Recources</h2>
   <div class="pdf-container">
