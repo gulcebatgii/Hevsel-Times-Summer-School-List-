@@ -5,61 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exam Resources | Hevsel Times</title>
   <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon">
-   <style>
-    body {
-      background-color: #960700;
-      font-family: 'LibreBaskerville', serif;
-      margin: 0;
-      padding: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      color: white;
-    }
+   <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınav Kaynakları</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #960700; /* Tüm sayfa kırmızı */
+            font-family: 'LibreBaskerville', serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
 
-    .container {
-      display: flex;
-      gap: 30px;
-    }
+        .exam-sections {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
 
-    .box {
-      background: white;
-      width: 260px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .exam-box {
+            background-color: white; /* Beyaz kutucuk */
+            color: #960700;
+            padding: 25px;
+            border-radius: 14px;
+            width: 320px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
 
-    .box h2 {
-      margin: 0 0 20px;
-      color: #960700;
-      font-size: 1.5em;
-    }
+        .exam-box:hover {
+            transform: translateY(-4px); /* Hafif hover animasyonu */
+        }
 
-    .btn {
-      width: 100%;
-      background-color: #960700;
-      color: white;
-      border: 2px solid #960700;
-      padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.2s, color 0.2s;
-    }
+        .section-title {
+            background-color: transparent;
+            color: #960700;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-    .btn:hover {
-      background-color: white;
-      color: #960700;
-    }
-  </style>
+        .subtopics {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .subtopics button {
+            background: white;
+            border: 2px solid #960700;
+            color: #960700;
+            padding: 10px;
+            font-size: 0.9em;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .subtopics button:hover {
+            background-color: #960700;
+            color: white;
+        }
+
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .pdf-item {
+            width: 80px; /* PDF kutusunun genişliği */
+            text-align: center;
+        }
+
+        .pdf-item img {
+            width: 100%; /* Kutunun içini doldur ama küçük tut */
+            height: auto;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .pdf-title {
+            font-size: 12px;
+            margin-top: 6px;
+            color: #960700;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sınav Kaynakları</h1>
+</header>
+
+<div class="exam-sections">
+    <div class="exam-box">
+        <div class="section-title">AP</div>
+        <div class="subtopics">
+            <button>AP Calculus</button>
+            <button>AP Physics</button>
+            <button>AP Chemistry</button>
+        </div>
+    </div>
+
+    <div class="exam-box">
+        <div class="section-title">SAT</div>
+        <div class="subtopics">
+            <button>SAT English</button>
+            <button>SAT Math</button>
+        </div>
+    </div>
+
+    <div class="exam-box">
+        <div class="section-title">IELTS</div>
+        <div class="subtopics">
+            <button>Reading</button>
+            <button>Listening</button>
+            <button>Speaking</button>
+            <button>Writing</button>
+        </div>
+    </div>
+
+    <div class="exam-box">
+        <div class="section-title">TOEFL</div>
+        <div class="subtopics">
+            <button>Reading</button>
+            <button>Listening</button>
+            <button>Speaking</button>
+            <button>Writing</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
 </head>
 <body>
 
