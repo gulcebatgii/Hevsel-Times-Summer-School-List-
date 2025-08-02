@@ -6,183 +6,73 @@
   <title>Exam Resources | Hevsel Times</title>
   <link rel="shortcut icon" href="../kirmizilogo.ico" type="image/x-icon">
   <style>
-   body {
-  background-color: #960700; /* tüm sayfa kırmızı */
-  font-family: 'LibreBaskerville', serif;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
+    body {
+      background-color: #960700;
+      font-family: 'LibreBaskerville', serif;
+      margin: 0;
+      padding: 40px 20px;
+      color: white;
+      text-align: center;
+    }
 
-header {
-  background-color: transparent; /* arka planı silindi */
-  color: white;
-  padding: 20px 0 5px;
-  font-size: 0.9em; /* font küçültüldü */
-  position: sticky; /* sayfa kayarken sabit kalsın */
-  top: 0;
-  z-index: 999;
-}
+    h1 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
 
-h1 {
-  margin: 0;
-  font-size: 1.8em; /* küçültüldü */
-}
+    .exam-section-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-.section-title {
-  background-color: white; /* beyaz kutucuk */
-  color: #960700;
-  padding: 12px 20px;
-  margin: 30px auto 15px;
-  display: inline-block;
-  border-radius: 8px;
-  font-size: 1.3em;
-  font-weight: bold;
-}
+    .exam-box {
+      background-color: white;
+      color: #960700;
+      padding: 30px 20px;
+      border-radius: 14px;
+      width: 260px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.subtopics {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 30px;
-}
+    .exam-box .section-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #960700;
+    }
 
-.subtopics button {
-  background: white;
-  border: 2px solid #960700;
-  color: #960700;
-  padding: 10px 18px;
-  font-size: 0.9em;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-}
+    .subtopics {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
 
-.subtopics button:hover {
-  background-color: #960700;
-  color: white;
-}
+    .subtopics a {
+      text-decoration: none;
+    }
 
-.page {
-  display: none;
-  padding: 20px;
-}
+    .subtopics button {
+      width: 100%;
+      background: white;
+      border: 2px solid #960700;
+      color: #960700;
+      padding: 10px;
+      font-size: 0.95em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
 
-.page.active {
-  display: block;
-}
-
-.pdf-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.pdf-item {
-  width: 120px; /* PDF kutusunun genişliği */
-  text-align: center;
-}
-
-.pdf-item img {
-  width: 100%; /* kutunun içini doldur ama küçük tut */
-  height: auto;
-  border-radius: 6px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-}
-
-.pdf-title {
-  font-size: 13px;
-  margin-top: 6px;
-  color: #960700;
-  text-align: center;
-}
-
-
-.back-btn {
-  position: fixed;
-  top: 23px;
-  left: 23px;
-  background-color: white;
-  color: #960700;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  z-index: 1000;
-  transition: 0.2s;
-}
-
-.back-btn:hover {
-  background-color: #960700;
-  color: white;
-  border: 2px solid white;
-}
-
- .exam-sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.exam-box {
-  background-color: white; /* beyaz kutucuk */
-  color: #960700;
-  padding: 25px;
-  border-radius: 14px;
-  width: 320px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.exam-box:hover {
-  transform: translateY(-4px); /* hafif hover animasyonu */
-}
-
-.exam-box .section-title {
-  background-color: transparent;
-  color: #960700;
-  font-size: 1.4em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-
-.exam-box .pdf-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.pdf-item {
-  width: 100%;
-}
-
-.pdf-item img {
-  width: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-
-.pdf-title {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #960700;
-}
-
+    .subtopics button:hover {
+      background-color: #960700;
+      color: white;
+    }
 
   </style>
 </head>
