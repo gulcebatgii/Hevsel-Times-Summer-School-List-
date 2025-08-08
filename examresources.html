@@ -3040,16 +3040,16 @@
 
 
 <script>
-  function openPage(id) {
-    document.getElementById("main").style.display = "none";
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
-  }
+    function openPage(id) {
+        document.getElementById("main").style.display = "none";
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+    }
 
-  function goBack() {
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    document.getElementById("main").style.display = "block";
-  }
+    function goBack() {
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+        document.getElementById("main").style.display = "block";
+    }
 </script>
 
 </body>
