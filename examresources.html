@@ -3040,22 +3040,23 @@
 
 
 
-<style>
-    .page {
-        display: none; /* Tüm sayfaları başlangıçta gizle */
-    }
-    .page.active {
-        display: block; /* Aktif sayfayı göster */
-    }
-</style>
 <script>
     function openPage(id) {
-    document.getElementById("main").style.display = "none"; 
-    
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
-    
-    document.getElementById(id).classList.add("active"); 
-}
+        document.getElementById("main").style.display = "none"; 
+        
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
+        
+        const targetPage = document.getElementById(id);
+        if (targetPage) {
+            targetPage.classList.add("active");
+        }
+    }
+
+    function goBack() {
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+        
+        document.getElementById("main").style.display = "flex";
+    }
 </script>
 
 </body>
