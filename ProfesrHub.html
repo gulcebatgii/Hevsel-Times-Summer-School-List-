@@ -6,7 +6,11 @@
     <title>Professor Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background: #7e0c0c;
@@ -15,57 +19,193 @@
             color: white;
         }
 
-        .header { padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         .back-btn {
             background: rgba(211, 47, 47, 0.9);
-            color: white; border: none; padding: 12px 24px; border-radius: 8px;
-            font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease;
-            display: flex; align-items: center; gap: 8px;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .back-btn:hover { background: rgba(211, 47, 47, 1); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
-        .title { font-family: 'Libre Baskerville', serif; font-size: 48px; font-weight: 700; text-align: center; margin: 40px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .back-btn:hover {
+            background: rgba(211, 47, 47, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-        .search-container { margin-bottom: 30px; }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .search-container {
+            margin-bottom: 30px;
+        }
+
         .search-box {
-            width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px;
-            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-        .search-box:focus { outline: none; box-shadow: 0 8px 30px rgba(0,0,0,0.2); transform: translateY(-2px); }
-        .search-box::placeholder { color: #666; }
 
-        .table-container { background: rgba(255, 255, 255, 0.95); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.2); backdrop-filter: blur(20px); }
-        table { width: 100%; border-collapse: collapse; }
-        .table-header { background: linear-gradient(135deg, #8b1538 0%, #7e0c0c 100%); color: white; }
-        .table-header th { padding: 20px 16px; font-weight: 600; text-align: left; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
-        tbody tr { border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.3s ease; }
-        tbody tr:hover { background: rgba(126,12,12,0.05); transform: translateX(5px); }
-        tbody tr:last-child { border-bottom: none; }
-        td { padding: 16px; color: #333; vertical-align: middle; }
-        .professor-name { font-weight: 600; color: #1a1a1a; font-size: 15px; }
-        .field-university { color: #666; font-size: 14px; line-height: 1.4; }
-        .contact { color: #0066cc; font-size: 14px; text-decoration: none; transition: color 0.3s ease; }
-        .contact:hover { color: #7e0c0c; text-decoration: underline; }
-        .connection { color: #333; font-size: 14px; font-weight: 400; }
+        .search-box:focus {
+            outline: none;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .search-box::placeholder {
+            color: #666;
+        }
+
+        .table-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-header {
+            background: linear-gradient(135deg, #8b1538 0%, #7e0c0c 100%);
+            color: white;
+        }
+
+        .table-header th {
+            padding: 20px 16px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(126, 12, 12, 0.05);
+            transform: translateX(5px);
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        td {
+            padding: 16px;
+            color: #333;
+            vertical-align: middle;
+        }
+
+        .professor-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 15px;
+        }
+
+        .field-university {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .contact {
+            color: #0066cc;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact:hover {
+            color: #7e0c0c;
+            text-decoration: underline;
+        }
+
+        .connection {
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+        }
 
         @media (max-width: 768px) {
-            .title { font-size: 32px; margin: 20px 0; }
-            .table-container { overflow-x: auto; }
-            table { min-width: 800px; }
-            td, th { padding: 12px 8px; font-size: 13px; }
+            .title {
+                font-size: 32px;
+                margin: 20px 0;
+            }
+
+            .table-container {
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 800px;
+            }
+
+            td, th {
+                padding: 12px 8px;
+                font-size: 13px;
+            }
         }
 
-        .fade-in { animation: fadeIn 0.8s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <button class="back-btn" onclick="goBack()">← Back to Menu</button>
+        <button class="back-btn" onclick="goBack()">
+            ← Back to Menu
+        </button>
     </div>
 
     <h1 class="title fade-in">Professor Hub</h1>
@@ -86,37 +226,6 @@
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <!-- (Tablo satırlarınız burada kalır) -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script>
-        // Back to Menu: doğrudan menu.html'e yönlendir
-        function goBack() {
-            window.location.href = 'menu.html';
-        }
-
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const rows = document.querySelectorAll('#tableBody tr');
-            rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(searchTerm) ? '' : 'none';
-            });
-        });
-
-        // Add smooth animations on load
-        window.addEventListener('load', function() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((el, index) => { el.style.animationDelay = (index * 0.1) + 's'; });
-        });
-    </script>
-</body>
-</html>
-
                     <tr>
                         <td class="professor-name">Suzanne Dikker</td>
                         <td class="field-university">Psychology / NYU</td>
@@ -290,4 +399,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
