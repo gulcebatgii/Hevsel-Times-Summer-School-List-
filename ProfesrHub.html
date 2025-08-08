@@ -335,10 +335,11 @@
             </table>
         </div>
     </div>
-    <script>
-               function goBack() {
-            // Direkt olarak menu.html dosyasına yönlendir
-            window.location.href = 'menu.html';
+    <script>   
+        
+        function goBack() {
+      
+         window.location.href = 'menu.html';
         }
         
         // Search functionality
@@ -354,6 +355,8 @@
                     row.style.display = 'none';
                 }
             });
+        });
+        
         // Add smooth animations on load
         window.addEventListener('load', function() {
             const elements = document.querySelectorAll('.fade-in');
