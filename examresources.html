@@ -28,7 +28,7 @@
         color: #960700;
         padding: 20px;
         border-radius: 14px;
-        width: 280px; /* Bir tık kısalttım */
+        width: 280px;
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
         text-align: center;
         transition: transform 0.2s ease;
@@ -67,7 +67,94 @@
         background-color: #960700;
         color: white;
     }
-</style>
+
+    .page {
+        display: none;
+        background-color: white;
+        color: #960700;
+        padding: 30px;
+        border-radius: 14px;
+        margin: 20px auto;
+        max-width: 1200px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #960700;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: 0.2s;
+    }
+
+    .back-btn:hover {
+        background-color: white;
+        color: #960700;
+        border: 2px solid #960700;
+    }
+
+    .pdf-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin-top: 60px;
+    }
+
+    .pdf-item {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.2s ease;
+        border: 2px solid #960700;
+    }
+
+    .pdf-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(150, 7, 0, 0.3);
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+    .pdf-item img {
+        width: 80px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 10px;
+    }
+
+    .pdf-title {
+        font-weight: bold;
+        color: white;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        color: #960700;
+        margin-bottom: 20px;
+    }
+    </style>
 </head>
 <body>
 
