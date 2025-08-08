@@ -6,77 +6,68 @@
     <title>Exam Resources | Hevsel Times</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #960700; /* Tüm sayfa kırmızı */
-            font-family: 'LibreBaskerville', serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+    body {
+        background-color: #960700;
+        font-family: 'LibreBaskerville', serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
 
-        .exam-sections {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
-        }
+    .exam-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 40px;
+    }
 
-        .exam-box {
-            background-color: white; /* Beyaz kutucuk */
-            color: #960700;
-            padding: 25px;
-            border-radius: 14px;
-            width: 320px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: transform 0.2s ease;
-        }
+    .exam-box {
+        background-color: white;
+        color: #960700;
+        padding: 20px;
+        border-radius: 14px;
+        width: 280px; /* Bir tık kısalttım */
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
 
-        .exam-box:hover {
-            transform: translateY(-4px); /* Hafif hover animasyonu */
-        }
+    .exam-box:hover {
+        transform: translateY(-4px);
+    }
 
-        .section-title {
-            background-color: transparent;
-            color: #960700;
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    .section-title {
+        background-color: transparent;
+        color: #960700;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
 
-        .subtopics {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
+    .subtopics {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-        .subtopics button {
-            background: white;
-            border: 2px solid #960700;
-            color: #960700;
-            padding: 10px;
-            font-size: 0.9em;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
+    .subtopics button {
+        background: white;
+        border: 2px solid #960700;
+        color: #960700;
+        padding: 8px;
+        font-size: 0.85em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
 
-        .subtopics button:hover {
-            background-color: #960700;
-            color: white;
-        }
-
-        .page {
-            display: none;
-            padding: 20px;
-        }
-
-        .page.active {
-            display: block;
-        }
-    </style>
+    .subtopics button:hover {
+        background-color: #960700;
+        color: white;
+    }
+</style>
 </head>
 <body>
 
@@ -84,69 +75,74 @@
     <h1>Exam Resources</h1>
 </header>
 
-<div class="exam-sections">
+<div id="main" class="exam-sections">
+
+    <-- AP Humanities -->
     <div class="exam-box">
-        <div class="section-title">AP</div>
+        <div class="section-title">AP Humanities</div>
         <div class="subtopics">
-           <button onclick="openPage('ap-arthistory')">AP Art History</button>
-    <button onclick="openPage('ap-bio')">AP Biology</button>
-    <button onclick="openPage('ap-calcab')">Calculus AB</button>
-    <button onclick="openPage('ap-calcbc')">Calculus BC</button>
-    <button onclick="openPage('ap-chem')">Chemistry</button>
-    <button onclick="openPage('ap-comparativegov')">AP Comparative Government and Politics</button>
-    <button onclick="openPage('ap-csprinciples')">AP Computer Science Principles</button>
-    <button onclick="openPage('ap-csa')">AP Computer Science A</button>
-    <button onclick="openPage('ap-englang')">AP English Language and Composition</button>
-    <button onclick="openPage('ap-englit')">AP English Literature and Composition</button>
-    <button onclick="openPage('ap-es')">AP Environmental Science</button>
-    <button onclick="openPage('ap-eurohistory')">AP European History</button>
-    <button onclick="openPage('ap-french')">AP French Language and Culture</button>
-    <button onclick="openPage('ap-german')">AP German Language and Culture</button>
-    <button onclick="openPage('ap-human')">AP Human Geography</button>
-    <button onclick="openPage('ap-latin')">AP Latin</button>
-    <button onclick="openPage('ap-macro')">AP Macroeconomics</button>
-    <button onclick="openPage('ap-micro')">AP Microeconomics</button>
-    <button onclick="openPage('ap-music')">AP Music Theory</button>
-    <button onclick="openPage('ap-preclac')">AP Pre Calculus</button>
-    <button onclick="openPage('ap-psychology')">AP Psychology</button>
-    <button onclick="openPage('ap-pyhsics1')">AP Pyhsics 1</button>
-    <button onclick="openPage('ap-pyhsics2')">AP Pyhsics 2</button>
-    <button onclick="openPage('ap-pyhsicscmech')">AP Pyhsics C: Mechanics</button>
-    <button onclick="openPage('ap-pyhsicscelec')">AP Pyhsics C: Electricity and Magnetism</button>
-    <button onclick="openPage('ap-spanishlang')">AP Spanish Language and Culture</button>
-    <button onclick="openPage('ap-spanishlit')">AP Spanish Literature and Culture</button>
-    <button onclick="openPage('ap-stats')">AP Statistics</button>
-    <button onclick="openPage('ap-usgov')">AP United States Government and Politics</button>
-    <button onclick="openPage('ap-ush')">AP United States History</button>
-    <button onclick="openPage('ap-world')">AP World History</button>
- </div>
-</div>
+            <button onclick="openPage('ap-comparativegov')">AP Comparative Government</button>
+            <button onclick="openPage('ap-eurohistory')">AP European History</button>
+            <button onclick="openPage('ap-human')">AP Human Geography</button>
+            <button onclick="openPage('ap-ush')">AP U.S. History</button>
+            <button onclick="openPage('ap-world')">AP World History</button>
+            <button onclick="openPage('ap-usgov')">AP U.S. Government & Politics</button>
+            <button onclick="openPage('ap-macro')">AP Macroeconomics</button>
+            <button onclick="openPage('ap-micro')">AP Microeconomics</button>
+            <button onclick="openPage('ap-psychology')">AP Psychology</button>
+        </div>
+    </div>
+
+    <-- AP Science -->
+    <div class="exam-box">
+        <div class="section-title">AP Science</div>
+        <div class="subtopics">
+            <button onclick="openPage('ap-bio')">AP Biology</button>
+            <button onclick="openPage('ap-chem')">AP Chemistry</button>
+            <button onclick="openPage('ap-es')">AP Environmental Science</button>
+            <button onclick="openPage('ap-pyhsics1')">AP Physics 1</button>
+            <button onclick="openPage('ap-pyhsics2')">AP Physics 2</button>
+            <button onclick="openPage('ap-pyhsicscmech')">AP Physics C: Mechanics</button>
+            <button onclick="openPage('ap-pyhsicscelec')">AP Physics C: Electricity & Magnetism</button>
+            <button onclick="openPage('ap-stats')">AP Statistics</button>
+            <button onclick="openPage('ap-preclac')">AP Pre Calculus</button>
+            <button onclick="openPage('ap-calcab')">AP Pre Calculus</button>
+            <button onclick="openPage('ap-calcbc')">AP Pre Calculus</button>
+            <button onclick="openPage('ap-csprinciples')">AP Computer Science Principles</button>
+            <button onclick="openPage('ap-csa')">AP Computer Science A</button>
+        </div>
+    </div>
+
+    <-- AP Language -->
+    <div class="exam-box">
+        <div class="section-title">AP Art and Language</div>
+        <div class="subtopics">
+            <button onclick="openPage('ap-englang')">AP English Language</button>
+            <button onclick="openPage('ap-englit')">AP English Literature</button>
+            <button onclick="openPage('ap-french')">AP French Language</button>
+            <button onclick="openPage('ap-german')">AP German Language</button>
+            <button onclick="openPage('ap-music')">AP Music Theory</button>
+            <button onclick="openPage('ap-latin')">AP Latin</button>
+            <button onclick="openPage('ap-spanishlang')">AP Spanish Language</button>
+            <button onclick="openPage('ap-spanishlit')">AP Spanish Literature</button>
+            <button onclick="openPage('ap-arthistory')">AP Art History</button>
+        </div>
+    </div>
+
 
     <div class="exam-box">
-        <div class="section-title">SAT</div>
+        <div class="section-title">SAT, IELTS ve TOEFL</div>
         <div class="subtopics">
             <button onclick="openPage('sat-english')">SAT English</button>
             <button onclick="openPage('sat-math')">SAT Math</button>
-        </div>
-    </div>
-
-    <div class="exam-box">
-        <div class="section-title">IELTS</div>
-        <div class="subtopics">
             <button onclick="openPage('ielts')">IELTS</button>
+            <button onclick="openPage('toefl')">TOEFL Reading</button>
         </div>
     </div>
 
-    <div class="exam-box">
-        <div class="section-title">TOEFL</div>
-        <div class="subtopics">
-            <button onclick="openPage('toefl')">Reading</button>
-        </div>
-    </div>
 </div>
 
 
-  <div id="main">
 
 <!-- ART HİSTORY -->
 <div id="ap-arthistory" class="page">
