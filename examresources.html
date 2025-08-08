@@ -3039,24 +3039,15 @@
 </div>
 
 
-<style>
-    .page {
-        display: none; 
-    }
-    .page.active {
-        display: block; 
-    }
-</style>
+
 <script>
     function openPage(id) {
-        document.getElementById("main").style.display = "none"; // Ana sayfayı gizle
-        document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); // Tüm sayfaların aktifliğini kaldır
-        document.getElementById(id).classList.add("active"); // Tıklanan sayfayı aktif yap
-    }
-    function goBack() {
-        document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); // Tüm sayfaların aktifliğini kaldır
-        document.getElementById("main").style.display = "block"; // Ana sayfayı göster
-    }
+    document.getElementById("main").style.display = "none"; 
+    
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
+    
+    document.getElementById(id).classList.add("active"); 
+}
 </script>
 
 </body>
