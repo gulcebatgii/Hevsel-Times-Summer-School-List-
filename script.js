@@ -28,9 +28,6 @@ function authenticateUser(username, password) {
     } else if (username == "CemilYildiz" && password == "BT2TT6JUN850OV8Y7B91") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
-    } else if (username == "DamlaZeryaAslan" && password == "JAUEU3KDG58L4V3BZ6IU") {
-        localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");
     } else if (username == "MuhammedEminYasul" && password == "85BA5D95PLP6L6OH9T4H") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
@@ -55,6 +52,9 @@ function authenticateUser(username, password) {
     } else if (username == "SalihaDuruBal" && password == "P8R4F6TK8JMQ7U5H0C9V") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
+    } else if (username == "KeremMuldur" && password == "ACD1GFW6X85DALLUM6YP") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html"); 
      } else if (username == "HelinSaraGoruk" && password == "W3LT7P5QY8KX0BJ9Z4V1") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
@@ -63,7 +63,7 @@ function authenticateUser(username, password) {
         window.location.replace("menu.html");    
      } else if (username == "YusufDuzgoren" && password == "B7X0T5V2R4M8J9Q1L6P") {
         localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html");    
+        window.location.replace("menu.html"); 
      } else if (username == "EmirTahaMacit" && password == "D3G9L1P8R7F0T5K2M6J") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");  
