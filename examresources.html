@@ -3194,30 +3194,36 @@
 </html>
 
 <script>
-        function goBack() {
-            window.location.href = 'menu.html';
-        }
+        function updateBackButton() {
+    const backBtn = document.querySelector('.back-btn');
 
-        // Search functionality
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) {
-            searchInput.addEventListener('input', function(e) {
-                const searchTerm = e.target.value.toLowerCase();
-                const rows = document.querySelectorAll('#tableBody tr');
-                rows.forEach(row => {
-                    const text = row.textContent.toLowerCase();
-                    row.style.display = text.includes(searchTerm) ? '' : 'none';
-                });
-            });
-        }
+    // Ana sayfa mı?
+    if (document.getElementById('main').style.display !== 'none') {
+        backBtn.style.display = 'block';  // göster
+    } else {
+        backBtn.style.display = 'none';   // gizle
+    }
+}
 
-        // Smooth animations on load
-        window.addEventListener('load', function() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((el, index) => {
-                el.style.animationDelay = (index * 0.1) + 's';
-            });
-        });
+// openPage ve goBack fonksiyonuna ekle
+function openPage(id) {
+    document.getElementById("main").style.display = "none"; 
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
+    const targetPage = document.getElementById(id);
+    if (targetPage) {
+        targetPage.classList.add("active");
+    }
+    updateBackButton(); // her sayfa açıldığında buton kontrolü
+}
+
+function goBack() {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById("main").style.display = "flex";
+    updateBackButton(); // geri dönünce buton tekrar göster
+}
+
+// sayfa yüklendiğinde buton durumu
+window.addEventListener('load', updateBackButton);
     </script>
 </body>
 </html>
