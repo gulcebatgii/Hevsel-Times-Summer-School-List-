@@ -67,9 +67,31 @@
                 gap: 30px;
             }
         }
+
+        .back-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            opacity: 1;
+            color: white;
+            background-color: #d32f2f;
+            font-family: 'LibreBaskerville';
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1000; /* her zaman üstte görünmesi için */
+        }
+
+        .back-btn:hover {
+            background-color: #ab8256;
+        }
     </style>
 </head>
 <body>
+
+    <button class="back-btn" onclick="goBack()">Back to Menu</button>
    <div class="contact-grid">
          
             <div class="contact-person">
@@ -304,5 +326,34 @@
             </div>
         </div>
     </div>
+</body>
+</html>
+
+<script>
+        function goBack() {
+            window.location.href = 'menu.html';
+        }
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                const rows = document.querySelectorAll('#tableBody tr');
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(searchTerm) ? '' : 'none';
+                });
+            });
+        }
+
+        // Smooth animations on load
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = (index * 0.1) + 's';
+            });
+        });
+    </script>
 </body>
 </html>
