@@ -3172,58 +3172,34 @@
 
 
 <script>
+    function updateBackButton() {
+        const backBtn = document.querySelector('.back-btn');
+        // Ana sayfa görünüyorsa buton göster, değilse gizle
+        if (document.getElementById('main').style.display !== 'none') {
+            backBtn.style.display = 'block';
+        } else {
+            backBtn.style.display = 'none';
+        }
+    }
+
     function openPage(id) {
         document.getElementById("main").style.display = "none"; 
-        
         document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
-        
         const targetPage = document.getElementById(id);
         if (targetPage) {
             targetPage.classList.add("active");
         }
+        updateBackButton(); // buton durumunu güncelle
     }
 
     function goBack() {
         document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-        
         document.getElementById("main").style.display = "flex";
+        updateBackButton(); // buton durumunu güncelle
     }
+
+    window.addEventListener('load', updateBackButton);
 </script>
 
-</body>
-</html>
-
-<script>
-        function updateBackButton() {
-    const backBtn = document.querySelector('.back-btn');
-
-    // Ana sayfa mı?
-    if (document.getElementById('main').style.display !== 'none') {
-        backBtn.style.display = 'block';  // göster
-    } else {
-        backBtn.style.display = 'none';   // gizle
-    }
-}
-
-// openPage ve goBack fonksiyonuna ekle
-function openPage(id) {
-    document.getElementById("main").style.display = "none"; 
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
-    const targetPage = document.getElementById(id);
-    if (targetPage) {
-        targetPage.classList.add("active");
-    }
-    updateBackButton(); // her sayfa açıldığında buton kontrolü
-}
-
-function goBack() {
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    document.getElementById("main").style.display = "flex";
-    updateBackButton(); // geri dönünce buton tekrar göster
-}
-
-// sayfa yüklendiğinde buton durumu
-window.addEventListener('load', updateBackButton);
-    </script>
 </body>
 </html>
