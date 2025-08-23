@@ -69,7 +69,7 @@
         color: white;
     }
 
-    /* Sayfa stilleri */
+  
     .page {
         display: none;
         background-color: white;
@@ -173,10 +173,10 @@
 </head>
 <body>
     
- <button onclick="history.back()">Back</button>
+<button class="back-btn" onclick="goBack()" style="display:none;">← Back</button>
 
-  
-    <button onclick="window.location.href='menu.html'">Back to Menu</button>
+<!-- Back to Menu -->
+<button class="menu-btn" onclick="goMenu()" style="display:none;">⇤ Back to Menu</button>
 
 
     
@@ -3177,24 +3177,57 @@
 
 
 <script>
-    function updateBackButton() {
+    let historyStack = []; 
+
+    function updateButtons() {
         const backBtn = document.querySelector('.back-btn');
-        const mainVisible = window.getComputedStyle(document.getElementById('main')).display !== 'none';
-        // Eğer main görünüyorsa butonu göster, sayfa içi alt içerikteysek gizle
-        backBtn.style.display = mainVisible ? 'block' : 'none';
+        const menuBtn = document.querySelector('.menu-btn');
+
+        // Eğer historyStack boş değilse Back görünür
+        backBtn.style.display = historyStack.length > 0 ? 'block' : 'none';
+        // Menüye dön butonu her sayfada görünsün
+        menuBtn.style.display = 'block';
     }
 
     function openPage(id) {
-        document.getElementById("main").style.display = "none"; 
-        document.querySelectorAll(".page").forEach(p => p.classList.remove("active")); 
+        const main = document.getElementById("main");
         const targetPage = document.getElementById(id);
+
         if (targetPage) {
+            // Şu an aktif sayfayı bul
+            const active = document.querySelector(".page.active");
+            if (active) {
+                historyStack.push(active.id); // aktif sayfayı history’e ekle
+                active.classList.remove("active");
+            } else if (main.style.display !== "none") {
+                historyStack.push("main");
+                main.style.display = "none";
+            }
+
             targetPage.classList.add("active");
+            updateButtons();
         }
-        updateBackButton(); // durum güncelle
     }
 
-    window.addEventListener('load', updateBackButton);
+    function goBack() {
+        if (historyStack.length > 0) {
+            const prevId = historyStack.pop();
+            document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+            if (prevId === "main") {
+                document.getElementById("main").style.display = "block";
+            } else {
+                document.getElementById("main").style.display = "none";
+                document.getElementById(prevId).classList.add("active");
+            }
+        }
+        updateButtons();
+    }
+
+    function goMenu() {
+        window.location.href = "menu.html";
+    }
+
+    window.addEventListener('load', updateButtons);
 </script>
 
 </body>
