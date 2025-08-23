@@ -86,25 +86,22 @@
         display: block;
     }
 
-    .back-btn {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background-color: #960700;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 1em;
-        transition: 0.2s;
-    }
-
-    .back-btn:hover {
-        background-color: white;
-        color: #960700;
-        border: 2px solid #960700;
-    }
+    .button-container {
+    text-align: center;
+}
+.back-button {
+    background-color: #C41E3A;
+    color: white;
+    font-size: 20px; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+.back-button:hover {
+    background-color: #A31530;
+}
 
     .pdf-container {
         display: grid;
@@ -171,12 +168,14 @@
         }
     </style>
 </head>
-<body>
-    
-<button class="back-btn" onclick="goBack()" style="display:none;">← Back</button>
 
-<!-- Back to Menu -->
+    <body>
+    <div class="button-container">
+        <button class="back-btn" onclick="goBack()" style="display:none;">← Back</button>
 <button class="menu-btn" onclick="goMenu()" style="display:none;">⇤ Back to Menu</button>
+    </div>
+</body>
+
 
 
     
@@ -3179,55 +3178,56 @@
 <script>
     let historyStack = []; 
 
-    function updateButtons() {
-        const backBtn = document.querySelector('.back-btn');
-        const menuBtn = document.querySelector('.menu-btn');
+function updateButtons() {
+    const backBtn = document.querySelector('.back-btn');
+    const menuBtn = document.querySelector('.menu-btn');
 
-        // Eğer historyStack boş değilse Back görünür
-        backBtn.style.display = historyStack.length > 0 ? 'block' : 'none';
-        // Menüye dön butonu her sayfada görünsün
-        menuBtn.style.display = 'block';
-    }
+    // Show back button only if there is a history to go back to
+    backBtn.style.display = historyStack.length > 0 ? 'block' : 'none';
+    // Always show menu button
+    menuBtn.style.display = 'block';
+}
 
-    function openPage(id) {
-        const main = document.getElementById("main");
-        const targetPage = document.getElementById(id);
+function openPage(id) {
+    const main = document.getElementById("main");
+    const targetPage = document.getElementById(id);
 
-        if (targetPage) {
-            // Şu an aktif sayfayı bul
-            const active = document.querySelector(".page.active");
-            if (active) {
-                historyStack.push(active.id); // aktif sayfayı history’e ekle
-                active.classList.remove("active");
-            } else if (main.style.display !== "none") {
-                historyStack.push("main");
-                main.style.display = "none";
-            }
-
-            targetPage.classList.add("active");
-            updateButtons();
+    if (targetPage) {
+        // Find the active page
+        const active = document.querySelector(".page.active");
+        if (active) {
+            historyStack.push(active.id); // Push current active page to history
+            active.classList.remove("active");
+        } else if (main.style.display !== "none") {
+            historyStack.push("main");
+            main.style.display = "none";
         }
-    }
 
-    function goBack() {
-        if (historyStack.length > 0) {
-            const prevId = historyStack.pop();
-            document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-            if (prevId === "main") {
-                document.getElementById("main").style.display = "block";
-            } else {
-                document.getElementById("main").style.display = "none";
-                document.getElementById(prevId).classList.add("active");
-            }
-        }
+        targetPage.classList.add("active");
         updateButtons();
     }
+}
 
-    function goMenu() {
-        window.location.href = "menu.html";
+function goBack() {
+    if (historyStack.length > 0) {
+        const prevId = historyStack.pop();
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+        if (prevId === "main") {
+            document.getElementById("main").style.display = "block";
+        } else {
+            document.getElementById("main").style.display = "none";
+            document.getElementById(prevId).classList.add("active");
+        }
     }
+    updateButtons();
+}
 
-    window.addEventListener('load', updateButtons);
+function goMenu() {
+    window.location.href = "menu.html";  // Redirect to menu.html
+}
+
+window.addEventListener('load', updateButtons);
+
 </script>
 
 </body>
