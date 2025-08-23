@@ -87,21 +87,26 @@
     }
 
     .button-container {
-    text-align: center;
-}
-.back-button {
-    background-color: #C41E3A;
-    color: white;
-    font-size: 20px; 
-    border: none;
-    border-radius: 5px; 
-    padding: 10px 20px;
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-}
-.back-button:hover {
-    background-color: #A31530;
-}
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 10px;
+    }
+    .back-btn, .menu-btn {
+        color: white;
+        background-color: #d32f2f; /* You can adjust the color */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .back-btn:hover {
+        background-color: #A31530;
+    }
+    .menu-btn {
+        display: none; /* Hide initially */
+    }
 
     .pdf-container {
         display: grid;
@@ -168,13 +173,11 @@
         }
     </style>
 </head>
-
-    <body>
+<body>
     <div class="button-container">
         <button class="back-btn" onclick="goBack()" style="display:none;">← Back</button>
-<button class="menu-btn" onclick="goMenu()" style="display:none;">⇤ Back to Menu</button>
+        <button class="menu-btn" onclick="goMenu()" style="display:none;">⇤ Back to Menu</button>
     </div>
-</body>
 
 
 
@@ -3176,59 +3179,51 @@
 
 
 <script>
-    let historyStack = []; 
-
-function updateButtons() {
-    const backBtn = document.querySelector('.back-btn');
-    const menuBtn = document.querySelector('.menu-btn');
-
-    // Show back button only if there is a history to go back to
-    backBtn.style.display = historyStack.length > 0 ? 'block' : 'none';
-    // Always show menu button
-    menuBtn.style.display = 'block';
-}
-
-function openPage(id) {
-    const main = document.getElementById("main");
-    const targetPage = document.getElementById(id);
-
-    if (targetPage) {
-        // Find the active page
-        const active = document.querySelector(".page.active");
-        if (active) {
-            historyStack.push(active.id); // Push current active page to history
-            active.classList.remove("active");
-        } else if (main.style.display !== "none") {
-            historyStack.push("main");
-            main.style.display = "none";
+        let historyStack = [];
+        function updateButtons() {
+            const backBtn = document.querySelector('.back-btn');
+            const menuBtn = document.querySelector('.menu-btn');
+            const activePage = document.querySelector(".page.active");
+            // Show Back button if you are on a resource-specific page
+            backBtn.style.display = activePage.id !== 'main' ? 'block' : 'none';
+            // Show menu button only when on the main page
+            menuBtn.style.display = activePage.id === 'main' ? 'block' : 'none';
         }
-
-        targetPage.classList.add("active");
-        updateButtons();
-    }
-}
-
-function goBack() {
-    if (historyStack.length > 0) {
-        const prevId = historyStack.pop();
-        document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-        if (prevId === "main") {
-            document.getElementById("main").style.display = "block";
-        } else {
-            document.getElementById("main").style.display = "none";
-            document.getElementById(prevId).classList.add("active");
+        function openPage(id) {
+            const main = document.getElementById("main");
+            const targetPage = document.getElementById(id);
+            if (targetPage) {
+                const active = document.querySelector(".page.active");
+                if (active) {
+                    historyStack.push(active.id); // Save the active page
+                    active.classList.remove("active");
+                } else if (main.style.display !== "none") {
+                    historyStack.push("main");
+                    main.style.display = "none";
+                }
+                targetPage.classList.add("active");
+                updateButtons();
+            }
         }
-    }
-    updateButtons();
-}
-
-function goMenu() {
-    window.location.href = "menu.html";  // Redirect to menu.html
-}
-
-window.addEventListener('load', updateButtons);
-
-</script>
-
+        function goBack() {
+            if (historyStack.length > 0) {
+                const prevId = historyStack.pop();
+                document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+                if (prevId === "main") {
+                    document.getElementById("main").style.display = "block";
+                } else {
+                    document.getElementById("main").style.display = "none";
+                    document.getElementById(prevId).classList.add("active");
+                }
+            }
+            updateButtons();
+        }
+        function goMenu() {
+            window.location.href = "menu.html";  // Redirect to menu.html
+        }
+        window.addEventListener('load', updateButtons);
+    </script>
 </body>
 </html>
+
+
