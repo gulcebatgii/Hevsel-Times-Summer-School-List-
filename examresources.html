@@ -8,155 +8,158 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <style>
    body {
-      background-color: #960700;
-      font-family: 'LibreBaskerville', serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      color: white;
-    }
+  background-color: #960700;
+  font-family: 'LibreBaskerville', serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
 
-    .exam-sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.exam-sections {
+  display: flex;              /* kutular yan yana */
+  gap: 40px;                  /* kutular arası boşluk */
+  justify-content: center;    /* ortalama */
+  flex-wrap: wrap;            /* küçük ekranda alta geçsin */
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .exam-box {
-      background-color: white;
-      color: #960700;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
+.exam-box {
+  background-color: white;
+  color: #960700;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  min-width: 280px;   /* kutuların minimum genişliği */
+  flex: 1;            /* eşit paylaşılsın */
+}
 
-    .exam-box:hover {
-      transform: translateY(-4px);
-    }
+.exam-box:hover {
+  transform: translateY(-4px);
+}
 
-    .section-title {
-      color: #960700;
-      font-size: 1.3em;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+.section-title {
+  color: #960700;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-    .subtopics {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.subtopics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .subtopics button {
-      background: white;
-      border: 2px solid #960700;
-      color: #960700;
-      padding: 8px;
-      font-size: 0.85em;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+.subtopics button {
+  background: white;
+  border: 2px solid #960700;
+  color: #960700;
+  padding: 8px;
+  font-size: 0.85em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-    .subtopics button:hover {
-      background-color: #960700;
-      color: white;
-    }
+.subtopics button:hover {
+  background-color: #960700;
+  color: white;
+}
 
-    .page {
-      display: none;
-      background-color: white;
-      color: #960700;
-      padding: 30px;
-      border-radius: 14px;
-      margin: 20px auto;
-      max-width: 1200px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-      position: relative;
-    }
+.page {
+  display: none;
+  background-color: white;
+  color: #960700;
+  padding: 30px;
+  border-radius: 14px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
 
-    .page.active {
-      display: block;
-    }
+.page.active {
+  display: block;
+}
 
-    .pdf-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-      margin-top: 60px;
-    }
+.pdf-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
 
-    .pdf-item {
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
+.pdf-item {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
 
-    .pdf-item:hover {
-      transform: translateY(-5px);
-    }
+.pdf-item:hover {
+  transform: translateY(-5px);
+}
 
-    .pdf-item a {
-      text-decoration: none;
-      display: block;
-    }
+.pdf-item a {
+  text-decoration: none;
+  display: block;
+}
 
-    .pdf-item img {
-      width: 180px;
-      height: 225px;
-      object-fit: cover;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      background-color: #ddd;
-      display: block;
-      margin: 0 auto 10px;
-      border: 2px solid #960700;
-    }
+.pdf-item img {
+  width: 180px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+  display: block;
+  margin: 0 auto 10px;
+  border: 2px solid #960700;
+}
 
-    .pdf-title {
-      font-weight: bold;
-      color: #960700;
-      font-size: 0.9em;
-    }
+.pdf-title {
+  font-weight: bold;
+  color: #960700;
+  font-size: 0.9em;
+}
 
-    h2 {
-      color: #960700;
-      margin-bottom: 20px;
-    }
+h2 {
+  color: #960700;
+  margin-bottom: 20px;
+}
 
-    .button-container {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      display: flex;
-      gap: 10px;
-      z-index: 1000;
-    }
+.button-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
 
-    .back-btn, .menu-btn {
-      color: white;
-      background-color: #d32f2f;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      display: none; /* Başlangıçta gizli */
-    }
+.back-btn, .menu-btn {
+  color: white;
+  background-color: #d32f2f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: none; /* Başlangıçta gizli */
+}
 
-    .back-btn:hover {
-      background-color: #ab8256;
-    }
+.back-btn:hover {
+  background-color: #ab8256;
+}
 
-    .menu-btn:hover {
-      background-color: #a32f2f;
-    }
+.menu-btn:hover {
+  background-color: #a32f2f;
+}
     </style>
 </head>
 <body>
