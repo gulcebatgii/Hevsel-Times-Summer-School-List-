@@ -131,45 +131,171 @@
     }
 
 
+    <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Resources | Hevsel Times</title>
+  <link rel="icon" type="image/png" href="Hevsel Times Logo Transparent Red.png">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #960700;
+      font-family: 'LibreBaskerville', serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .exam-sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .exam-box {
+      background-color: white;
+      color: #960700;
+      padding: 20px;
+      border-radius: 14px;
+      width: 280px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .exam-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .section-title {
+      color: #960700;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .subtopics {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .subtopics button {
+      background: white;
+      border: 2px solid #960700;
+      color: #960700;
+      padding: 8px;
+      font-size: 0.85em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .subtopics button:hover {
+      background-color: #960700;
+      color: white;
+    }
+
+    .page {
+      display: none;
+      background-color: white;
+      color: #960700;
+      padding: 30px;
+      border-radius: 14px;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .pdf-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .pdf-item {
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .pdf-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .pdf-item a {
+      text-decoration: none;
+      display: block;
+    }
+
+    .pdf-item img {
+      width: 180px;
+      height: 225px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin: 0 auto 10px;
+      border: 2px solid #960700;
+    }
+
+    .pdf-title {
+      font-weight: bold;
+      color: #960700;
+      font-size: 0.9em;
+    }
+
+    h2 {
+      color: #960700;
+      margin-bottom: 20px;
+    }
+
+    /* --- Butonlar --- */
     .button-container {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    gap: 10px;
-    z-index: 1000;
-    font-family: 'LibreBaskerville', serif;
-}
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
 
-.back-btn, .menu-btn {
-    color: white;
-    background-color: #d32f2f;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+    .back-btn, .menu-btn {
+      color: white;
+      background-color: #d32f2f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
-.back-btn:hover {
-    background-color: #ab8256;
-}
+    .back-btn:hover {
+      background-color: #ab8256;
+    }
 
-.menu-btn:hover {
-    background-color: #a32f2f;
+    .menu-btn:hover {
+      background-color: #a32f2f;
+    }
 
-.menu-btn {
-    display: none; 
-}
-
+    .menu-btn {
+      display: none;
+    }
     </style>
 </head>
 <body>
    <div class="button-container">
     <button class="back-btn" onclick="goBack()">Back</button>
     <button class="menu-btn" onclick="goMenu()">Back to Menu</button>
-</div>
+  </div>
 
     
 <header>
@@ -3168,55 +3294,53 @@
 
 
 
-<script>
-        function updateButtons() {
-    const backBtn = document.querySelector('.back-btn');
-    const menuBtn = document.querySelector('.menu-btn');
-    const main = document.getElementById('main');
-    const activePage = document.querySelector('.page.active');
+ <script>
+    function updateButtons() {
+      const backBtn = document.querySelector('.back-btn');
+      const menuBtn = document.querySelector('.menu-btn');
+      const main = document.getElementById('main');
+      const activePage = document.querySelector('.page.active');
 
-    if (main.style.display !== 'none') {
-        // Ana sayfa görünürken
-        backBtn.style.display = 'none';
-        menuBtn.style.display = 'inline-block';  // Menü butonu görünür
-    } else if (activePage) {
-        // Alt sayfa görünürken
-        backBtn.style.display = 'inline-block';  // Back butonu görünür
+      if (activePage) {
+        // Alt sayfa açık → Back görünsün
+        backBtn.style.display = 'inline-block';
         menuBtn.style.display = 'none';
+      } else {
+        // Ana sayfa açık → Menu görünsün
+        backBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';
+      }
     }
-}
 
-function openPage(id) {
-    const main = document.getElementById('main');
-    const targetPage = document.getElementById(id);
+    function openPage(id) {
+      const main = document.getElementById('main');
+      const targetPage = document.getElementById(id);
 
-    if (targetPage) {
+      if (targetPage) {
         main.style.display = 'none';
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         targetPage.classList.add('active');
         updateButtons();
+      }
     }
-}
 
-function goBack() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('main').style.display = 'block';
-    updateButtons();
-}
+    function goBack() {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('main').style.display = 'block';
+      updateButtons();
+    }
 
-function goMenu() {
-    window.location.href = 'menu.html';
-}
+    function goMenu() {
+      window.location.href = 'menu.html';
+    }
 
-window.addEventListener('load', () => {
-    document.getElementById('main').style.display = 'block';
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    updateButtons();
-});
-
-
-    </script>
+    window.addEventListener('load', () => {
+      document.getElementById('main').style.display = 'block';
+      updateButtons();
+    });
+  </script>
 </body>
 </html>
+
 
 
