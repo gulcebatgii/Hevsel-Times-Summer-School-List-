@@ -7,127 +7,126 @@
     <link rel="icon" type="image/png" href="Hevsel Times Logo Transparent Red.png">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <style>
-    body {
-        background-color: #960700;
-        font-family: 'LibreBaskerville', serif;
-        margin: 0;
-        padding: 20px;
-        text-align: center;
-        color: white;
+   body {
+      background-color: #960700;
+      font-family: 'LibreBaskerville', serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: white;
     }
 
     .exam-sections {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-        margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .exam-box {
-        background-color: white;
-        color: #960700;
-        padding: 20px;
-        border-radius: 14px;
-        width: 280px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        transition: transform 0.2s ease;
+      background-color: white;
+      color: #960700;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.2s ease;
     }
 
     .exam-box:hover {
-        transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .section-title {
-        background-color: transparent;
-        color: #960700;
-        font-size: 1.3em;
-        font-weight: bold;
-        margin-bottom: 15px;
+      color: #960700;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .subtopics {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .subtopics button {
-        background: white;
-        border: 2px solid #960700;
-        color: #960700;
-        padding: 8px;
-        font-size: 0.85em;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: 0.2s;
+      background: white;
+      border: 2px solid #960700;
+      color: #960700;
+      padding: 8px;
+      font-size: 0.85em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
     }
 
     .subtopics button:hover {
-        background-color: #960700;
-        color: white;
+      background-color: #960700;
+      color: white;
     }
 
-  
     .page {
-        display: none;
-        background-color: white;
-        color: #960700;
-        padding: 30px;
-        border-radius: 14px;
-        margin: 20px auto;
-        max-width: 1200px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-        position: relative;
+      display: none;
+      background-color: white;
+      color: #960700;
+      padding: 30px;
+      border-radius: 14px;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      position: relative;
     }
 
     .page.active {
-        display: block;
+      display: block;
     }
 
-         .pdf-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        margin-top: 60px;
+    .pdf-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 60px;
     }
 
     .pdf-item {
-        text-align: center;
-        transition: transform 0.2s ease;
+      text-align: center;
+      transition: transform 0.2s ease;
     }
 
     .pdf-item:hover {
-        transform: translateY(-5px);
+      transform: translateY(-5px);
     }
 
     .pdf-item a {
-        text-decoration: none;
-        display: block;
+      text-decoration: none;
+      display: block;
     }
 
     .pdf-item img {
-        width: 180px;
-        height: 225px;
-        object-fit: cover;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        background-color: #ddd;
-        display: block;
-        margin: 0 auto 10px;
-        border: 2px solid #960700;
+      width: 180px;
+      height: 225px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #ddd;
+      display: block;
+      margin: 0 auto 10px;
+      border: 2px solid #960700;
     }
 
     .pdf-title {
-        font-weight: bold;
-        color: #960700;
-        font-size: 0.9em;
+      font-weight: bold;
+      color: #960700;
+      font-size: 0.9em;
     }
 
     h2 {
-        color: #960700;
-        margin-bottom: 20px;
+      color: #960700;
+      margin-bottom: 20px;
     }
 
     .button-container {
@@ -148,6 +147,7 @@
       cursor: pointer;
       font-size: 16px;
       transition: background-color 0.3s ease;
+      display: none; /* Başlangıçta gizli */
     }
 
     .back-btn:hover {
@@ -157,18 +157,13 @@
     .menu-btn:hover {
       background-color: #a32f2f;
     }
-
-    .menu-btn {
-      display: none;
-    }
     </style>
 </head>
 <body>
-   <div class="button-container">
+  <div class="button-container">
     <button class="back-btn" onclick="goBack()">Back</button>
     <button class="menu-btn" onclick="goMenu()">Back to Menu</button>
   </div>
-
     
 <header>
     <h1>Exam Resources</h1>
@@ -3173,14 +3168,14 @@
       const main = document.getElementById('main');
       const activePage = document.querySelector('.page.active');
 
-      if (activePage) {
-        // Alt sayfa açık → Back görünsün
-        backBtn.style.display = 'inline-block';
-        menuBtn.style.display = 'none';
-      } else {
-        // Ana sayfa açık → Menu görünsün
+      if (main.style.display !== 'none') {
+        // Ana sayfa
         backBtn.style.display = 'none';
         menuBtn.style.display = 'inline-block';
+      } else if (activePage) {
+        // Alt sayfa
+        backBtn.style.display = 'inline-block';
+        menuBtn.style.display = 'none';
       }
     }
 
@@ -3208,6 +3203,7 @@
 
     window.addEventListener('load', () => {
       document.getElementById('main').style.display = 'block';
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       updateButtons();
     });
   </script>
