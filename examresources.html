@@ -86,29 +86,7 @@
         display: block;
     }
 
-    .button-container {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        display: flex;
-        gap: 10px;
-    }
-    .back-btn, .menu-btn {
-        color: white;
-        background-color: #d32f2f; /* You can adjust the color */
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .back-btn:hover {
-        background-color: #A31530;
-    }
-    .menu-btn {
-        display: none; /* Hide initially */
-    }
-
-    .pdf-container {
+         .pdf-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
@@ -152,34 +130,46 @@
         margin-bottom: 20px;
     }
 
-         .back-btn {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            opacity: 1;
-            color: white;
-            background-color: #d32f2f;
-            font-family: 'LibreBaskerville';
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            z-index: 1000; /* her zaman üstte görünmesi için */
-        }
 
-        .back-btn:hover {
-            background-color: #ab8256;
-        }
+    .button-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    font-family: 'LibreBaskerville', serif;
+}
+
+.back-btn, .menu-btn {
+    color: white;
+    background-color: #d32f2f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #ab8256;
+}
+
+.menu-btn:hover {
+    background-color: #a32f2f;
+
+.menu-btn {
+    display: none; 
+}
+
     </style>
 </head>
 <body>
-    <div class="button-container">
-        <button class="back-btn" onclick="goBack()" style="display:none;">← Back</button>
-        <button class="menu-btn" onclick="goMenu()" style="display:none;">⇤ Back to Menu</button>
-    </div>
-
-
+   <div class="button-container">
+    <button class="back-btn" onclick="goBack()">Back</button>
+    <button class="menu-btn" onclick="goMenu()">Back to Menu</button>
+</div>
 
     
 <header>
@@ -3179,49 +3169,52 @@
 
 
 <script>
-        let historyStack = [];
         function updateButtons() {
-            const backBtn = document.querySelector('.back-btn');
-            const menuBtn = document.querySelector('.menu-btn');
-            const activePage = document.querySelector(".page.active");
-            // Show Back button if you are on a resource-specific page
-            backBtn.style.display = activePage.id !== 'main' ? 'block' : 'none';
-            // Show menu button only when on the main page
-            menuBtn.style.display = activePage.id === 'main' ? 'block' : 'none';
-        }
-        function openPage(id) {
-            const main = document.getElementById("main");
-            const targetPage = document.getElementById(id);
-            if (targetPage) {
-                const active = document.querySelector(".page.active");
-                if (active) {
-                    historyStack.push(active.id); // Save the active page
-                    active.classList.remove("active");
-                } else if (main.style.display !== "none") {
-                    historyStack.push("main");
-                    main.style.display = "none";
-                }
-                targetPage.classList.add("active");
-                updateButtons();
-            }
-        }
-        function goBack() {
-            if (historyStack.length > 0) {
-                const prevId = historyStack.pop();
-                document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-                if (prevId === "main") {
-                    document.getElementById("main").style.display = "block";
-                } else {
-                    document.getElementById("main").style.display = "none";
-                    document.getElementById(prevId).classList.add("active");
-                }
-            }
-            updateButtons();
-        }
-        function goMenu() {
-            window.location.href = "menu.html";  // Redirect to menu.html
-        }
-        window.addEventListener('load', updateButtons);
+    const backBtn = document.querySelector('.back-btn');
+    const menuBtn = document.querySelector('.menu-btn');
+    const main = document.getElementById('main');
+    const activePage = document.querySelector('.page.active');
+
+    if (main.style.display !== 'none') {
+        // Ana sayfa görünürken
+        backBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';  // Menü butonu görünür
+    } else if (activePage) {
+        // Alt sayfa görünürken
+        backBtn.style.display = 'inline-block';  // Back butonu görünür
+        menuBtn.style.display = 'none';
+    }
+}
+
+function openPage(id) {
+    const main = document.getElementById('main');
+    const targetPage = document.getElementById(id);
+
+    if (targetPage) {
+        main.style.display = 'none';
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        targetPage.classList.add('active');
+        updateButtons();
+    }
+}
+
+function goBack() {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('main').style.display = 'block';
+    updateButtons();
+}
+
+function goMenu() {
+    window.location.href = 'menu.html';
+}
+
+window.addEventListener('load', () => {
+    document.getElementById('main').style.display = 'block';
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    updateButtons();
+});
+
+
     </script>
 </body>
 </html>
