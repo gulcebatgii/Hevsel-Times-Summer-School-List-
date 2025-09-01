@@ -18,7 +18,7 @@
 
 .exam-sections {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
   gap: 30px;
   margin-top: 40px;
   max-width: 1400px;
@@ -29,14 +29,18 @@
 .exam-box {
   background-color: white;
   color: #960700;
-  padding: 40px 20px;
+  padding: 60px 20px;  /* büyük görünsün */
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: transform 0.2s ease;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.5em;   /* yazı büyük */
   font-weight: bold;
+  min-height: 200px; /* kutular eşit olsun */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .exam-box:hover {
