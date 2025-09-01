@@ -18,15 +18,14 @@
 
 .exam-sections {
     display: flex;
-    flex-wrap: nowrap;    
+    flex-wrap: nowrap;      /* Satır atlamasın, hep yan yana kalsın */
     justify-content: center;
-    gap: 40px;
+    gap: 40px;              /* Kutular arası boşluk */
     margin-top: 40px;
-    overflow-x: auto;     
 }
 
 .exam-box {
-    flex: 0 0 280px;    
+    width: 280px;           /* Sabit genişlik */
     background-color: white;
     color: #960700;
     padding: 20px;
@@ -37,7 +36,7 @@
 }
 
 .exam-box:hover {
-    transform: translateY(-6px); 
+    transform: translateY(-6px); /* Hover’da yukarı çıksın */
 }
 
 .section-title {
@@ -69,6 +68,7 @@
     background-color: #960700;
     color: white;
 }
+
 
 .page {
   display: none;
