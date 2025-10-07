@@ -55,6 +55,12 @@ function authenticateUser(username, password) {
     } else if (username == "KeremMuldur" && password == "ACD1GFW6X85DALLUM6YP") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html"); 
+     } else if (username == "NisanTunc" && password == "N6T1R8J7L0P9Q2M2N6D") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html"); 
+     } else if (username == "MertOzdag" && password == "W3LT7P5QY8KX0BJ9A5TQ") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html");  
      } else if (username == "HelinSaraGoruk" && password == "W3LT7P5QY8KX0BJ9Z4V1") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
@@ -64,9 +70,18 @@ function authenticateUser(username, password) {
      } else if (username == "YusufDuzgoren" && password == "B7X0T5V2R4M8J9Q1L6P") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html"); 
-     } else if (username == "EmirTahaMacit" && password == "D3G9L1P8R7F0T5K2M6J") {
+      } else if (username == "MinaBasaran" && password == "W3LT7P5QY8KX0BJ9A2S6") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");  
+     } else if (username == "EmirTahaMacit" && password == "D3G9L1P8R7F0T5K2M6J") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html");
+    } else if (username == "DerenTumen" && password == "A3G0L1P8R7F0T5K2N3D") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html
+     } else if (username == "MarasOncel" && password == "B3G0L1P8R7F0T5K2K7S") {
+        localStorage.setItem('authenticated', 'true');
+        window.location.replace("menu.html");
      } else if (username == "DenizYavuz" && password == "F6T1R8J7L0P9Q2M3K5D") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");  
