@@ -78,7 +78,7 @@ function authenticateUser(username, password) {
         window.location.replace("menu.html");
     } else if (username == "DerenTumen" && password == "A3G0L1P8R7F0T5K2N3D") {
         localStorage.setItem('authenticated', 'true');
-        window.location.replace("menu.html
+        window.location.replace("menu.html")
      } else if (username == "MarasOncel" && password == "B3G0L1P8R7F0T5K2K7S") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");
