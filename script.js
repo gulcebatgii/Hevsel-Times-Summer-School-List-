@@ -67,7 +67,7 @@ function authenticateUser(username, password) {
      } else if (username == "ZeynepAtli" && password == "B7T3X8P4Z9L2W1V5Y6Q0") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html");    
-     } else if (username == "YusufDuzgoren" && password == "B7X0T5V2R4M8J9Q1L6P") {
+     } else if (username == "GuneyAydemir" && password == "B7X0T5V2R4M8J9Q1L6P") {
         localStorage.setItem('authenticated', 'true');
         window.location.replace("menu.html"); 
       } else if (username == "MinaBasaran" && password == "W3LT7P5QY8KX0BJ9A2S6") {
